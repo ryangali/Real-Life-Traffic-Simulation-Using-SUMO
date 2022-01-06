@@ -1,0 +1,250 @@
+The  following  is  a  step-by-step  guide  on  how  to  replicate  the  algorithm  for  a  simpler version than the one presented in this work.
+We explain the algorithm design using the city of Ibarra as an example.  
+The same procedure is utilized for the city of Guayaquil.  
+Building a SUMO traffic simulation in easy steps:
+
+1. First, for Window users, install SUMO and NETEDIT from 
+
+https://www.eclipse.org/sumo/
+
+SUMO works with Mac but needs HomeBrew installed.  For this work, we focused on the Windows version.
+
+2. Next, obtain the map from the area to be simulated from 
+
+https://www.openstreetmap.org
+
+This website lets us import any city map to be utilized with SUMO.
+
+3. In the OSM website, locate the city you want to simulate and click on “export”.  
+This generates an “.osm” file.  
+Example:  Ibarra.osm
+
+4. Open your command (CMD) terminal in Windows and using “dir” and “cd”, locate the folders where you saved the “.osm” file.
+
+5. Once  the  “.osm”  file  is  located  in  the  CMD  terminal,  type  or  copy  and  paste  the following command:
+
+netconvert –osm-files Ibarra.osm -o IbarraMap.net.xml
+
+The command above takes the file “Ibarra.osm” and converts it to “IbarraMap.net.xml”. The names "Ibarra" and "IbarraMap" can be changed as desired.
+
+6. Open NetEdit program and open the “IbarraMap.net.xml” file.
+Using NetEdit make sure all street-turns and traffic-lights are set and working correctly.
+A tutorial on how to use NetEdit can be found on the SUMO website.
+
+7. Create a new text file and name it “RoutesIbarra.rou.xml”.  
+This is where we create our vehicles and define traffic flows. 
+The name "RouteIbarra" can be changed as desired.
+If you need extra help with vehicles types, parameters, and flows, visit 
+
+https://sumo.dlr.de/docs/index.html
+
+You can also find convenient tutorials to help with the simulation.
+
+8. The “RoutesIbarra.rou.xml” file must have the following style:
+
+<?xml version="1.0" encoding="UTF-8"?>
+   
+<routes>
+    <vType id="Bus" length="13.0" minGap="0.25" vClass="bus" departLane="random" maxSpeed="17.67" speedFactor="0.80" speedDev="0.25" accel="5.0" decel="7.5" emergencyDecel="10.0"/>
+    <vType id="Car" length="5.0" minGap="0.20" vClass="passenger" departLane="random" maxSpeed="19.5" speedFactor="0.90" speedDev="0.25" accel="4.5" decel="6.5" emergencyDecel="9.0"/>
+    <vType id="Taxi" length="5.0" minGap="0.20" vClass="passenger" departLane="random" maxSpeed="19.5" speedFactor="0.95" speedDev="0.25" accel="4.5" decel="6.5" emergencyDecel="9.0"/>
+    <vType id="Moto" length="2.5" minGap="0.20" vClass="motorcycle" departLane="random" maxSpeed="19.5" speedFactor="0.90" speedDev="0.25" accel="4.5" decel="6.0" emergencyDecel="8.0"/>
+    <vType id="Truck" length="8.0" minGap="0.25" vClass="truck" departLane="random" maxSpeed="17.67" speedFactor="0.80" speedDev="0.25" accel="4.9" decel="7.2" emergencyDecel="9.8"/>
+    <vType id="Trail" length="15.0" minGap="0.25" vClass="trailer" departLane="random" maxSpeed="17.67" speedFactor="0.80" speedDev="0.25" accel="5.0" decel="7.5" emergencyDecel="10.5"/>
+    <vType id="Other" length="7.0" minGap="0.20" vClass="custom1" departLane="random" maxSpeed="19.5" speedFactor="0.90" speedDev="0.25" accel="4.5" decel="7.0" emergencyDecel="9.5"/>
+    <vType id="Machinery" length="8.0" minGap="0.30" vClass="custom1" departLane="random" maxSpeed="17.67" speedFactor="0.80" speedDev="0.25" accel="4.9" decel="7.5" emergencyDecel="10.2"/>
+   
+    <route id="Col-B4Redon1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i2b"/>
+    <route id="Col-B4Redon2" edges="i16a i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5"/>
+    <route id="Col-B4Redon3" edges="i12 i11 i10 i9 i8 i7 i6 i5"/>
+    <route id="Col-Panam1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h10a"/>
+    <route id="Col-Panam2" edges="i16a i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h1a "/>
+    <route id="Col-Panam3" edges="i15a i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2"/>
+    <route id="Col-Termi1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17 j18 j19 j20 j21 j22 j23"/>
+    <route id="Col-Termi2" edges="i16a i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8a j9a j10a"/>
+    <route id="Col-Termi3" edges="i12b i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j14a"/>
+    <route id="Col-Redon-Merc1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Col-Redon-Merc2" edges="i13a i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Col-Redon-Merc3" edges="i12b i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5"/>
+    <route id="Col-Redon-Obel1" edges="i16a i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g20 g21 g22 y6 y5 y4 v1 v0 v0b"/>
+    <route id="Col-Redon-Obel2" edges="i14a i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g19a"/>
+    <route id="Col-Redon-Obel3" edges="i13a i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18"/>
+    <route id="Merc-Fray-Panam1" edges="c3d c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h10a"/>
+    <route id="Merc-Fray-Panam2" edges="c0g c0f c0e c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h1a"/>
+    <route id="Merc-Fray-Panam3" edges="c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6"/>
+    <route id="Mari-Fray-Redon-Panam1" edges="g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10"/>
+    <route id="Mari-Fray-Redon-Panam2" edges="g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h1a"/>
+    <route id="Mari-Fray-Redon-Panam3" edges="g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3"/>
+    <route id="Merc-Redon-Termi1" edges="c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Merc-Redon-Termi2" edges="c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12"/>
+    <route id="Merc-Redon-Termi3" edges="c5b c5a c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Merc-Fray-Termi1" edges="c0g c0f c0e c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Merc-Fray-Termi2" edges="c3d c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12"/>
+    <route id="Merc-Fray-Termi3" edges="c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Merc-Fray-B4Redon1" edges="c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 "/>
+    <route id="Merc-Fray-B4Redon2" edges="c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5"/>
+    <route id="Merc-Fray-B4Redon3" edges="c5d c5c c5b c5a c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 "/>
+    <route id="Merc-Redon-Col1" edges="c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Merc-Redon-Col2" edges="c3b c3a c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21"/>
+    <route id="Merc-Redon-Col3" edges="c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e13a"/>
+    <route id="Merc-Redon-Yach1" edges="c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Merc-Redon-Yach2" edges="c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c22a"/>
+    <route id="Merc-Redon-Yach3" edges="c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21"/>
+    <route id="Obel-Fray-B4Pan1" edges="g20d g20c g20b g20a g20a0 a3 a4 a5 a6 c10 c11 c12 c13 c13a"/>
+    <route id="Obel-Fray-B4Pan2" edges="x2c x2b x1 a4 a5 a6 c10 c11 c12 c13 c14 c14a"/>
+    <route id="Obel-Fray-B4Pan3" edges="a2 a3 a4 a5 a6 c10 c11 c12 c12a"/>
+    <route id="Obel-Fray-Yach1" edges="y3 y2 y1 a1 a2 a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Obel-Fray-Yach2" edges="x2b x2a x2 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c25a"/>
+    <route id="Obel-Fray-Yach3" edges="a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c20a"/>
+   
+    <flow id="0b1a" color="255,0,255" begin="0" end="3450" number="104" type="Car" route="Col-B4Redon3"/>
+    <flow id="0b1c" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Col-B4Redon2"/>
+    <flow id="0b1e" color="255,0,255" begin="0" end="3450" number="10" type="Car" route="Col-B4Redon1"/>
+    <flow id="0d1" color="255,128,0" begin="0" end="3450" type="Moto" number="13" route="Col-B4Redon2"/>
+    <flow id="0e1" color="255,255,0" begin="0" end="3450" number="25" type="Taxi" route="Col-B4Redon3"/>
+    <flow id="0g2" color="255,255,255" begin="0" end="3450" number="16" type="Truck" route="Col-B4Redon2"/>
+    <flow id="1b1a" color="255,0,255" begin="0" end="3450" number="75" type="Car" route="Col-Panam3"/>
+    <flow id="1b1c" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Col-Panam2"/>
+    <flow id="1d1" color="255,128,0" begin="0" end="3450" type="Moto" number="7" route="Col-Panam2"/>
+    <flow id="1e1" color="255,255,0" begin="0" end="3450" number="10" type="Taxi" route="Col-Panam2"/>
+    <flow id="2b1a" color="255,0,255" begin="0" end="3450" number="58" type="Car" route="Col-Termi3"/>
+    <flow id="2e1" color="255,255,0" begin="0" end="3450" number="15" type="Taxi" route="Col-Termi1"/>
+    <flow id="3b1a" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Col-Redon-Merc3"/>
+    <flow id="4b1a" color="255,0,255" begin="0" end="3450" number="17" type="Car" route="Col-Redon-Obel3"/>
+    <flow id="4e1a" color="255,255,0" begin="0" end="3450" number="7" type="Taxi" route="Col-Redon-Obel2"/>
+    <flow id="5b1a" color="255,0,255" begin="0" end="3450" number="18" type="Car" route="Merc-Fray-Panam3"/>
+    <flow id="5e1a" color="255,255,0" begin="0" end="3450" number="7" type="Taxi" route="Merc-Fray-Panam2"/>
+    <flow id="6b1b" color="255,0,255" begin="0" end="3450" number="4" type="Car" route="Mari-Fray-Redon-Panam2"/>
+    <flow id="7b1" color="255,0,255" begin="0" end="3450" number="5" type="Car" route="Obel-Fray-Redon-Panam3"/>
+    <flow id="8a1" color="0,255,255" begin="0" end="3450" number="4" type="Bus" route="Obel-B4Redon1"/>
+    <flow id="8b1a" color="255,0,255" begin="0" end="3450" number="97" type="Car" route="Obel-B4Redon3"/>
+    <flow id="8b1c" color="255,0,255" begin="0" end="3450" number="30" type="Car" route="Obel-B4Redon1"/>
+    <flow id="8d1" color="255,128,0" begin="0" end="3450" type="Moto" number="14" route="Obel-B4Redon2"/>
+    <flow id="8e1" color="255,255,0" begin="0" end="3450" number="39" type="Taxi" route="Merc-Fray-Panam2"/>
+    <flow id="9a1a" color="0,255,255" begin="0" end="3450" number="8" type="Bus" route="Obel-Redon-Panam1"/>
+    <flow id="9b1a" color="255,0,255" begin="0" end="3450" number="50" type="Car" route="Obel-Redon-Panam3"/>
+    <flow id="9b1b" color="255,0,255" begin="0" end="3450" number="13" type="Car" route="Obel-Redon-Panam2"/>
+    <flow id="9e1a" color="255,255,0" begin="0" end="3450" number="12" type="Taxi" route="Obel-Redon-Panam2"/>
+    <flow id="10b1a" color="255,0,255" begin="0" end="3450" number="29" type="Car" route="Obel-Redon-Col3"/>
+    <flow id="10d1a" color="255,128,0" begin="0" end="3450" number="3" type="Moto" route="Obel-Redon-Col1"/>
+    <flow id="10e1a" color="255,255,0" begin="0" end="3450" number="21" type="Taxi" route="Obel-Redon-Col2"/>
+    <flow id="11a1a" color="0,255,255" begin="0" end="3450" number="11" type="Bus" route="Obel-Redon-Panam1"/>
+    <flow id="11b1a" color="255,0,255" begin="0" end="3450" number="37" type="Car" route="Obel-Redon-Termi3"/>
+    <flow id="11d1a" color="255,128,0" begin="0" end="3450" number="2" type="Moto" route="Obel-Redon-Termi1"/>
+    <flow id="11e1a" color="255,255,0" begin="0" end="3450" number="15" type="Taxi" route="Obel-Redon-Termi2"/>
+    <flow id="12b1d" color="255,0,255" begin="0" end="3450" number="9" type="Car" route="Merc-Redon-Panam3"/>
+    <flow id="12e1a" color="255,255,0" begin="0" end="3450" number="8" type="Taxi" route="Merc-Redon-Panam2"/>
+    <flow id="13e1a" color="255,255,0" begin="0" end="3450" number="5" type="Taxi" route="Merc-Redon-Col3"/>
+    <flow id="14e1a" color="255,255,0" begin="0" end="3450" number="4" type="Taxi" route="Merc-Redon-Yach3"/>
+</routes>
+
+All vehicle types, routes travelled, and vehicle flows must be declared in this file. Make sure there are no mistakes, or the code will not work correctly.
+The heading needs to be exactly as seen in Figure 4.2 for the program to work.  
+The“vType id” is the function used to create specific vehicles such as buses, cars, mo-torcycles, trucks, and trailers.  
+It also allows the user to create personalized vehicles. 
+The “route id” is the name given to the entire lane that we want the vehicle to travel.
+Notice “r2”, “r3”,...are all names of specific roads, and this was previously modified in NetEdit.  
+All lanes must be connected or else SUMO sends out an error and the simulation will not work.
+Finally,  the  “flow  id”  is  the  function  that  puts  together  both  vehicles  and  routes created.  
+This is where you can change the variables for several vehicles of the same type but differs slightly.  
+For example, we have declared only one car in the file above.  
+Thanks to the “flow” function, we can generate several of the same cars with different colors and travel different routes.
+Recall that this is an example. For real-life simulations, the best advice is to create the same vehicle with different parameters to simulate different types of car brands.
+
+9. This is an extra step for  Windows  users in case you  do not  see the extension  name for your  files. 
+You should see the entire name of the file such as “RoutesIbarra.rou.xml” in your folders.  
+If it only shows “RoutesIbarra” then you must do the following to show the extension name.   
+For  Windows  7  or  10,  go  to  the  folders  tab,  go  to  “View”,  then  click  on “Details”, and finally check the “File Name Extension” box.
+
+10. Finally we must create a text file and name it, “Ibarra.sumocfg”.  
+This file runs the SUMO GUI, which runs the simulations.  
+It is in this file that you can declare input and output files.  The following is an example of this file.
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<configuration>
+	<input>
+		<net-file value="IbarraTriangleMap.net.xml"/>
+		<route-files value="RoutesIbarraTriangle.rou.xml"/>
+	</input>
+
+	<time>
+		<begin value="0"/>	
+	</time>
+  
+	<report>
+		<xml-validation value="never"/>
+		<duration-log.disable value="true"/>
+		<duration-log.statistics value="true"/>
+		<no-step-log value="true"/>
+		<device.emissions.probability value="1.0"/>
+	</report>
+</configuration>
+
+Again,  the heading must be included exactly as seen.  
+The input is the previously created  files.  The  converted  map  “IbarraMap.net.xml”  and  the  routes  files  “IbarraRoutes.rou.xml”.  
+Lastly, we need to include the starting and ending time-step for the simulation.  
+In this example, the simulation begins at “timestep=0” and ends at“timestep=2400”. Notice that each timestep is equivalent to 1 second in real-time.
+
+11. Now open SUMO GUI. Then open the “Ibarra.sumocfg” file, and run the simulation.
+Notice that SUMO GUI will let you know if there are any mistakes within your files such as missing edges or lanes connections.  
+If presented with any mistakes, fix them in NetEdit and re-run the simulation in SUMO GUI. Repeat this step until no errors appear.
+
+12. Finally, we run some simulation reports and generate output files.  
+The output files are in “.xml” format and give useful data on all vehicles and vehicular GHG emissions.
+It is recommended to add the output line in the “Ibarra.sumocfg” file once the simulation has been perfected.  
+There are several output files available thanks to SUMO.
+The full lists of these files can be found in the following links:
+
+https://sumo.dlr.de/docs/Simulation/Output.html
+
+https://sumo.dlr.de/docs/Simulation/Output/EmissionOutput.html
+
+13. Now, open and edit the “Ibarra.sumocfg” to include the command to generate output files
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<configuration>
+	<input>
+		<net-file value="IbarraTriangleMap.net.xml"/>
+		<route-files value="RoutesIbarraTriangle.rou.xml"/>
+	</input>
+
+	<time>
+		<begin value="0"/>	
+	</time>
+	
+<output>
+		<output-prefix value="TIME" />
+		<netstate-dump value="DumpNet.xml" />
+		<emission-output value="Emissions.xml" />
+		<fcd-output.acceleration value="true"/>
+		<summary-output value="Summary.xml" />
+		<tripinfo-output value="TripInfo.xml" />
+		<amitran-output value="VehTrajectories.xml"/>
+		<fcd-output value="FcdOutput.xml"/>
+		<vehroute-output value="VehRoute.xml"/>
+		<link-output value="Links.xml"/>
+		<stop-output value="StopTimes.xml"/>
+		<statistic-output value="Statistics.xml"/>
+	</output>
+
+	<report>
+		<xml-validation value="never"/>
+		<duration-log.disable value="true"/>
+		<duration-log.statistics value="true"/>
+		<no-step-log value="true"/>
+		<device.emissions.probability value="1.0"/>
+	</report>
+</configuration>
+
+Here, we have some examples of the different type of output files that can be generated from the simulation.
+
+14. Lastly,  we  can  use  the  output  files  from  the  simulations  to  obtain  statistical  information  regarding  vehicular  GHG  emissions using Analysis of Variance.  
+This results generated can then be presented in graphs and charts for the public.
+
+
+
+
+
+
