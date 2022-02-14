@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   
+<routes>
+    <vType id="Bus" length="13.0" minGap="0.25" vClass="bus" departLane="random" maxSpeed="17.67" speedFactor="0.80" speedDev="0.25" accel="5.0" decel="7.5" emergencyDecel="10.0"/>
+    <vType id="Car" length="5.0" minGap="0.20" vClass="passenger" departLane="random" maxSpeed="19.5" speedFactor="0.90" speedDev="0.25" accel="4.5" decel="6.5" emergencyDecel="9.0"/>
+    <vType id="Taxi" length="5.0" minGap="0.20" vClass="passenger" departLane="random" maxSpeed="19.5" speedFactor="0.95" speedDev="0.25" accel="4.5" decel="6.5" emergencyDecel="9.0"/>
+    <vType id="Moto" length="2.5" minGap="0.20" vClass="motorcycle" departLane="random" maxSpeed="19.5" speedFactor="0.90" speedDev="0.25" accel="4.5" decel="6.0" emergencyDecel="8.0"/>
+    <vType id="Truck" length="8.0" minGap="0.25" vClass="truck" departLane="random" maxSpeed="17.67" speedFactor="0.80" speedDev="0.25" accel="4.9" decel="7.2" emergencyDecel="9.8"/>
+    <vType id="Trail" length="15.0" minGap="0.25" vClass="trailer" departLane="random" maxSpeed="17.67" speedFactor="0.80" speedDev="0.25" accel="5.0" decel="7.5" emergencyDecel="10.5"/>
+    <vType id="Other" length="7.0" minGap="0.20" vClass="custom1" departLane="random" maxSpeed="19.5" speedFactor="0.90" speedDev="0.25" accel="4.5" decel="7.0" emergencyDecel="9.5"/>
+    <vType id="Machinery" length="8.0" minGap="0.30" vClass="custom1" departLane="random" maxSpeed="17.67" speedFactor="0.80" speedDev="0.25" accel="4.9" decel="7.5" emergencyDecel="10.2"/>
+    <route id="Col-B4Redon1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i2b"/>
+    <route id="Col-B4Redon2" edges="i16a i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5"/>
+    <route id="Col-B4Redon3" edges="i12 i11 i10 i9 i8 i7 i6 i5"/>
+    <route id="Col-Panam1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h10a"/>
+    <route id="Col-Panam2" edges="i16a i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h1a "/>
+    <route id="Col-Panam3" edges="i15a i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2"/>
+    <route id="Col-Termi1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17 j18 j19 j20 j21 j22 j23"/>
+    <route id="Col-Termi2" edges="i16a i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8a j9a j10a"/>
+    <route id="Col-Termi3" edges="i12b i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j14a"/>
+    <route id="Col-Redon-Merc1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Col-Redon-Merc2" edges="i13a i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Col-Redon-Merc3" edges="i12b i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5"/>
+    <route id="Col-Redon-Obel1" edges="i16a i16 i15 i14 i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g20 g21 g22 y6 y5 y4 v1 v0 v0b"/>
+    <route id="Col-Redon-Obel2" edges="i14a i13 i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g19a"/>
+    <route id="Col-Redon-Obel3" edges="i13a i12 i11 i10 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18"/>
+    <route id="Merc-Fray-Panam1" edges="c3d c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h10a"/>
+    <route id="Merc-Fray-Panam2" edges="c0g c0f c0e c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h1a"/>
+    <route id="Merc-Fray-Panam3" edges="c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6"/>
+    <route id="Mari-Fray-Redon-Panam1" edges="g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10"/>
+    <route id="Mari-Fray-Redon-Panam2" edges="g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h1a"/>
+    <route id="Mari-Fray-Redon-Panam3" edges="g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3"/>
+    <route id="Mari-Redon-Panam1" edges="a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10"/>
+    <route id="Mari-Redon-Panam2" edges="a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h3 h4"/>
+    <route id="Mari-Redon-Panam3" edges="a19a a19 a20 a21 u1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h1 h2"/>
+    <route id="Mari-Redon-Termi1" edges="a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Mari-Redon-Termi2" edges="a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12"/>
+    <route id="Mari-Redon-Termi3" edges="a19a a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Mari-Redon-Yach1" edges="a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Mari-Redon-Yach2" edges="a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22"/>
+    <route id="Mari-Redon-Yach3" edges="a19a a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20"/>
+    <route id="Mari-Redon-Col1" edges="a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Mari-Redon-Col2" edges="a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18"/>
+    <route id="Mari-Redon-Col3" edges="a19a a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13"/>
+    <route id="Mari-Fray-B4Redon1" edges="g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i2b"/>
+    <route id="Mari-Fray-B4Redon2" edges="g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i5a"/>
+    <route id="Mari-Fray-B4Redon3" edges="g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6"/>
+    <route id="Mari-Fray-B4Pan1" edges="g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15"/>
+    <route id="Mari-Fray-B4Pan2" edges="g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15"/>
+    <route id="Mari-Fray-B4Pan3" edges="g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15"/>
+    <route id="Mari-Fray-Redon-Termi1" edges="g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Mari-Fray-Redon-Termi2" edges="g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12"/>
+    <route id="Mari-Fray-Redon-Termi3" edges="g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Obel-Fray-Redon-Panam1" edges="x4b x4a x2e x2d x2c x2b x2a x2 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h10a"/>
+    <route id="Obel-Fray-Redon-Panam2" edges="x4f x4 y1 a1 a2 a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h1a"/>
+    <route id="Obel-Fray-Redon-Panam3" edges="x3c x2c x2b x1 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 h1 h2 h3"/>
+    <route id="Obel-Fray-Redon-Termi1" edges="x4f x4 y1 a1 a2 a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Obel-Fray-Redon-Termi2" edges="x4 y1 a1 a2 a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12"/>
+    <route id="Obel-Fray-Redon-Termi3" edges="x3c x2c x2b x2a x2 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Obel-Fray-B4Redon1" edges="y4 y3 y2 y1 a1 a2 a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i2b"/>
+    <route id="Obel-Fray-B4Redon2" edges="x4a x2e x2d x2c x2b x2a x2 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i5a"/>
+    <route id="Obel-Fray-B4Redon3" edges="g20d g20c g20b g20a g20a0 a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i6a"/>
+    <route id="Obel-B4Redon1" edges="y2 y1 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a18a"/>
+    <route id="Obel-B4Redon2" edges="x2c x2b x1 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15"/>
+    <route id="Obel-B4Redon3" edges="g20d g20c g20b g20a g20a0 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13"/>
+    <route id="Obel-Redon-Yach2" edges="g20d g20c g20b g20a g20a0 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Obel-Redon-Yach1" edges="x4a x2e x2d x2c x2b x2a x2 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Obel-Redon-Yach3" edges="g20a g20a0 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Obel-Redon-Panam1" edges="v3 v2 y4 y3 y2 y1 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10"/>
+    <route id="Obel-Redon-Panam3" edges="x3c x2c x2b x2a x2 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h1a"/>
+    <route id="Obel-Redon-Panam2" edges="g20d g20c g20b g20a g20a0 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3"/>
+    <route id="Obel-Redon-Col1" edges="g20b g20a g20a0 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18 e19 e20"/>
+    <route id="Obel-Redon-Col2" edges="x2b x2a x2 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e13a"/>
+    <route id="Obel-Redon-Col3" edges="x4a x4 y1 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12b"/>
+    <route id="Obel-Redon-Termi1" edges="v3 v2 y4 y3 y2 y1 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17 j18 j19 j20 j21 j22 j23"/>
+    <route id="Obel-Redon-Termi3" edges="x4a x4 y1 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8a j9a j10a"/>
+    <route id="Obel-Redon-Termi2" edges="a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17 j18 j19 j20 j20a"/>
+    <route id="Merc-B4Redon1" edges="c0g c0f c0e c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18"/>
+    <route id="Merc-B4Redon2" edges="c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14"/>
+    <route id="Merc-B4Redon3" edges="c5d c5c c5b c5a c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13"/>
+    <route id="Merc-Redon-Panam1" edges="c0e c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3 h4 h5 h6 h7 "/>
+    <route id="Merc-Redon-Panam2" edges="c3d c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3"/>
+    <route id="Merc-Redon-Panam3" edges="c5b c5a c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h1a"/>
+    <route id="Merc-Redon-Termi1" edges="c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Merc-Redon-Termi2" edges="c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12"/>
+    <route id="Merc-Redon-Termi3" edges="c5b c5a c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Merc-Fray-Termi1" edges="c0g c0f c0e c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Merc-Fray-Termi2" edges="c3d c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12"/>
+    <route id="Merc-Fray-Termi3" edges="c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Merc-Fray-B4Redon1" edges="c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5 i4 i3 "/>
+    <route id="Merc-Fray-B4Redon2" edges="c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 i5"/>
+    <route id="Merc-Fray-B4Redon3" edges="c5d c5c c5b c5a c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 i9 i8 i7 i6 "/>
+    <route id="Merc-Redon-Col1" edges="c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Merc-Redon-Col2" edges="c3b c3a c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21"/>
+    <route id="Merc-Redon-Col3" edges="c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e13a"/>
+    <route id="Merc-Redon-Yach1" edges="c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Merc-Redon-Yach2" edges="c2 c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c22a"/>
+    <route id="Merc-Redon-Yach3" edges="c3 c4 c5 c6 c7 c8 c9 a7 a8 a9 a10 a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21a e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21"/>
+    <route id="Obel-Fray-B4Pan1" edges="g20d g20c g20b g20a g20a0 a3 a4 a5 a6 c10 c11 c12 c13 c13a"/>
+    <route id="Obel-Fray-B4Pan2" edges="x2c x2b x1 a4 a5 a6 c10 c11 c12 c13 c14 c14a"/>
+    <route id="Obel-Fray-B4Pan3" edges="a2 a3 a4 a5 a6 c10 c11 c12 c12a"/>
+    <route id="Obel-Fray-Yach1" edges="y3 y2 y1 a1 a2 a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Obel-Fray-Yach2" edges="x2b x2a x2 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c25a"/>
+    <route id="Obel-Fray-Yach3" edges="a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c20a"/>
+    <route id="Obel-Fray-Col1" edges=" x4a x4 y1 a1 a2 a3 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Obel-Fray-Col2" edges=" x1 a4 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21"/>
+    <route id="Obel-Fray-Col3" edges=" x2 a5 a6 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e13a"/>
+    <route id="Merc-Fray-B4Pan1" edges="c0g c0f c0e c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c14a"/>
+    <route id="Merc-Fray-B4Pan2" edges="c3c c3b c3a c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c13a"/>
+    <route id="Merc-Fray-B4Pan3" edges="c5 c6 c7 c8 c9 c10 c11 c12 c12a"/>
+    <route id="Merc-Fray-Yach1" edges="c0d c0c c0b c0a c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c25a"/>
+    <route id="Merc-Fray-Yach2" edges="c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c22a"/>
+    <route id="Merc-Fray-Yach3" edges="c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21"/>
+    <route id="Merc-Fray-Col1" edges="c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Merc-Fray-Col2" edges="c5b c5a c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18 e18a"/>
+    <route id="Merc-Fray-Col3" edges="c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12b"/>
+    <route id="Mari-Fray-Yach1" edges="g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Mari-Fray-Yach2" edges="g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c22a"/>
+    <route id="Mari-Fray-Yach3" edges="g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c20a"/>
+    <route id="Mari-Fray-Col1" edges="g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Mari-Fray-Col2" edges="g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18 e18a"/>
+    <route id="Mari-Fray-Col3" edges="g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12b"/>
+    <route id="Panam-Mari-B4Mall1" edges="d13 d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9"/>
+    <route id="Panam-Mari-B4Mall2" edges="d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 "/>
+    <route id="Panam-Mari-B4Mall3" edges="d3 d2 d1 u4 u5 u6 g1 g2 g3"/>
+    <route id="Panam-Mari-Obel1" edges="d13 d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g20 g21 g22 y6 y5 y4 v1 v0 v0b"/>
+    <route id="Panam-Mari-Obel3" edges="d8a d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17"/>
+    <route id="Panam-Mari-Obel2" edges="d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19"/>
+    <route id="Panam-Mari-Merc1" edges="d13 d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5 k6"/>
+    <route id="Panam-Mari-Merc2" edges="d10a d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4"/>
+    <route id="Panam-Mari-Merc3" edges="d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 "/>
+    <route id="Panam-Mari-Fray-Col1" edges="d12a d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Panam-Mari-Fray-Col2" edges="d10a d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12b"/>
+    <route id="Panam-Mari-Fray-Col3" edges="d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11"/>
+    <route id="Panam-Mari-Fray-Yach1" edges="d8a d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Panam-Mari-Fray-Yach2" edges="d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21"/>
+    <route id="Panam-Mari-Fray-Yach3" edges="d7a d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21"/>
+    <route id="Panam-Mari-Fray-B4Pan1" edges="d8a d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15"/>
+    <route id="Panam-Mari-Fray-B4Pan2" edges="d5 d4 d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13"/>
+    <route id="Panam-Mari-Fray-B4Pan3" edges="d3 d2 d1 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12"/>
+    <route id="Termi-Mari-B4Pan1" edges="j20b b19a b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15"/>
+    <route id="Termi-Mari-B4Pan2" edges="b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13"/>
+    <route id="Termi-Mari-B4Pan3" edges="b13b b12b b11a b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12"/>
+    <route id="Termi-Mari-Yach1" edges="j20b b19a b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Termi-Mari-Yach2" edges="b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24"/>
+    <route id="Termi-Mari-Yach3" edges="b13b b12b b11a b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21"/>
+    <route id="Termi-Mari-Col1" edges="j20b b19a b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Termi-Mari-Col2" edges="b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12 e13 e14 e15 e16 e17 e18"/>
+    <route id="Termi-Mari-Col3" edges="b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 c9 c10 c11 c12 c13 c14 c15 c16 c17a e11 e12"/>
+    <route id="Termi-Mari-Merc1" edges="j20b b19a b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Termi-Mari-Merc2" edges="b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4"/>
+    <route id="Termi-Mari-Merc3" edges="b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3"/>
+    <route id="Termi-Mari-Obel1" edges="j20b b19a b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g20 g21"/>
+    <route id="Termi-Mari-Obel2" edges="b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g20"/>
+    <route id="Termi-Mari-Obel3" edges="b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18"/>
+    <route id="Termi-B4Pan1" edges="j20b b19a b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5"/>
+    <route id="Termi-B4Pan2" edges="b13b b12b b11a b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e2a"/>
+    <route id="Termi-B4Pan3" edges="b4 b3 b2 b1 u6 u7 e1 e2 e3 e4"/>
+    <route id="Termi-Yach1" edges="b22 b21 b20 b19 b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Termi-Yach2" edges="b9a b2c b2d b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c26"/>
+    <route id="Termi-Yach3" edges="b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c20a"/>
+    <route id="Termi-Col1" edges="b22 b21 b20 b19 b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18 e19 e20"/>
+    <route id="Termi-Col3" edges="b9a b2c b2d b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12b"/>
+    <route id="Termi-Col2" edges="b13b b12b b11a b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11"/>
+    <route id="Termi-Pan-Obel1" edges="b22 b21 b20 b19 b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18 g19 g20 g21 g22 y6 y5 y4 v1 v0"/>
+    <route id="Termi-Pan-Obel2" edges="b3b b3a b2b b2c b2d b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18 g19 g19a"/>
+    <route id="Termi-Pan-Obel3" edges="b13b b12b b11a b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18"/>
+    <route id="Termi-Pan-Merc3" edges="b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Termi-Pan-Merc1" edges="b22 b21 b20 b19 b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4 k5 k6"/>
+    <route id="Termi-Pan-Merc2" edges="b3b b3a b2b b2c b2d b7 b6 b5 b4 b3 b2 b1 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4"/>
+    <route id="Termi-Panam2" edges="b13b b12b b11a b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 u1 u2 h1 h1a "/>
+    <route id="Termi-Panam1" edges="b22 b21 b20 b19 b18 b17 b16 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 u6 u7 u1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h10a"/>
+    <route id="Termi-Panam3" edges="b4 b3 b2 b1 u6 u7 u1 u2 h1 h2 h3 h4 h5 h5a"/>
+    <route id="Panam-Col1" edges="d13 d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12 e13 e14 e15 e16 e17 e18 e19 e20 e21 e22"/>
+    <route id="Panam-Col3" edges="d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11 e12b"/>
+    <route id="Panam-Col2" edges="d10a d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 e10 e11"/>
+    <route id="Panam-Yach1" edges="d13 d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21 c22 c23 c24 c25 c25a"/>
+    <route id="Panam-Yach2" edges="d7a d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c21"/>
+    <route id="Panam-Yach3" edges="d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7 e8 e9 c18 c19 c20 c20a"/>
+    <route id="Panam-B4Pan1" edges="d13 d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6b"/>
+    <route id="Panam-B4Pan2" edges="d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4b"/>
+    <route id="Panam-B4Pan3" edges="d3 d2 d1 u4 u5 u6 u7 e1 e2 e2a"/>
+    <route id="Panam-Termi1" edges="d8 d7 d6 d5 d4 d3 d2 d1 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Panam-Termi2" edges="d5 d4 d3 d2 d1 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 "/>
+    <route id="Panam-Termi3" edges="d3 d2 d1 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Panam-Pan-Obel1" edges="d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18 g19 g20 g21 g22 y6 y5 y4 v1 v0"/>
+    <route id="Panam-Pan-Obel2" edges="d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18"/>
+    <route id="Panam-Pan-Obel3" edges="d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18 g19 g20 g21 g22 y6 y6a"/>
+    <route id="Panam-Pan-B4Mall1" edges="d13 d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 "/>
+    <route id="Panam-Pan-B4Mall2" edges="d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14"/>
+    <route id="Panam-Pan-B4Mall3" edges="d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 "/>
+    <route id="Panam-Pan-Merc1" edges="d13 d12 d11 d10 d9 d8 d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Panam-Pan-Merc2" edges="d7a d7 d6 d5 d4 d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4 k5"/>
+    <route id="Panam-Pan-Merc3" edges="d3 d2 d1 u4 u5 u6 u7 e1 e2 e3 e4 e5 e6 e7a f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3"/>
+    <route id="Yach-B4Mall1" edges="f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17"/>
+    <route id="Yach-B4Mall2" edges="f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15"/>
+    <route id="Yach-B4Mall3" edges="f7 f8 f9 f10 f11 f12 f13"/>
+    <route id="Yach-Pan-B4Redon1" edges="f2 f3 f4 f5 f6 f7 f8a i6 i5 i4 i3 i2"/>
+    <route id="Yach-Pan-B4Redon2" edges="f3 f4 f5 f6 f7 f8a i6 i5 i4 i3"/>
+    <route id="Yach-Pan-B4Redon3" edges="f4 f5 f6 f7 f8a i6 i5"/>
+    <route id="Yach-Redon-Panam1" edges="f2 f3 f4 f5 f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10"/>
+    <route id="Yach-Redon-Panam2" edges="f4 f5 f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4 h5 h6 h7"/>
+    <route id="Yach-Redon-Panam3" edges="f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 h1 h2 h3 h4"/>
+    <route id="Yach-Redon-Termi1" edges="f1 f2 f3 f4 f5 f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17"/>
+    <route id="Yach-Redon-Termi2" edges="f3 f4 f5 f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12"/>
+    <route id="Yach-Redon-Termi3" edges="f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Yach-Redon-Obel1" edges="f2 f3 f4 f5 f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g20 g21 g22 y6 y5 y4 v1 v0"/>
+    <route id="Yach-Redon-Obel2" edges="f4 f5 f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 g20 g21"/>
+    <route id="Yach-Redon-Obel3" edges="f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13 g14 g15 g16 g17 g18 g19 "/>
+    <route id="Yach-Redon-Merc1" edges="f2 f3 f4 f5 f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Yach-Redon-Merc2" edges="f4 f5 f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3 k4 k5"/>
+    <route id="Yach-Redon-Merc3" edges="f6 f7 f8a i6 i5 i4 i3 i2 i1 u2 u3 u4 u5 u6 g1 g2 g3 g4 g5 g6 g7 g8 g9 g10 g11 g12 g13a g14a g15a k1 k2 k3"/>
+    <route id="Yach-Mari-B4Redon1" edges="f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18"/>
+    <route id="Yach-Mari-B4Redon2" edges="f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15"/>
+    <route id="Yach-Mari-B4Redon3" edges="f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12"/>
+    <route id="Yach-Obel1" edges="f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18 g19 g20 g21 g22 y6 y5 y4 v1 v0"/>
+    <route id="Yach-Obel2" edges="f6a f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18 g19 g20 g21 g22 y6 y6a"/>
+    <route id="Yach-Obel3" edges="f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18"/>
+    <route id="Yach-Merc1" edges="f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Yach-Merc2" edges="f5a f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4"/>
+    <route id="Yach-Merc3" edges="f6a f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k3a"/>
+    <route id="Col-Fray-Merc1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4 k5 k6 k7"/>
+    <route id="Col-Fray-Merc3" edges="i13a i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k3a"/>
+    <route id="Col-Fray-Merc2" edges="i12b i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 f22 f23 k1 k2 k3 k4 k5 k6"/>
+    <route id="Col-Fray-Obel1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18 g19 g20 g21 g22 y6 y5 y4 v1 v0 v0a"/>
+    <route id="Col-Fray-Obel2" edges="i12b i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18 g19 g20 g21 g22 y6 y6a"/>
+    <route id="Col-Fray-Obel3" edges="i14a i13 i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19 f20 f21 g15 g16 g17 g18"/>
+    <route id="Col-Fray-Redon-Panam1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h10a"/>
+    <route id="Col-Fray-Redon-Panam2" edges="i12b i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h1a"/>
+    <route id="Col-Fray-Redon-Panam3" edges="i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3"/>
+    <route id="Col-Fray-Redon-Termi1" edges="i15a i15 i14 i13 i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17 j18 j19 j20 j21 j22 j23"/>
+    <route id="Col-Fray-Redon-Termi2" edges="i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8a j9a j10a"/>
+    <route id="Col-Fray-Redon-Termi3" edges="i13a i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Col-Fray-B4Redon1" edges="i18 i17 i16 i15 i14 i13 i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16"/>
+    <route id="Col-Fray-B4Redon2" edges="i16 i15 i14 i13 i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14"/>
+    <route id="Col-Fray-B4Redon3" edges="i13a i12 i11 i10 i9 i8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12"/>
+    <route id="Yach-Fray-Redon-Panam2" edges="f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h1a"/>
+    <route id="Yach-Fray-Redon-Panam1" edges="f5a f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h10a"/>
+    <route id="Yach-Fray-Redon-Panam3" edges="f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 h1 h2 h3"/>
+    <route id="Yach-Fray-Redon-Termi1" edges="f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8 j9 j10 j11 j12 j13 j14 j15 j16 j17 j18 j19 j20 j21 j22 j23"/>
+    <route id="Yach-Fray-Redon-Termi3" edges="f2a f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7"/>
+    <route id="Yach-Fray-Redon-Termi2" edges="f5a f5 f6 f7 f8 f9 f10 f11 f12 f13 f14 f15 f16 f17 f18 f19a f19b a11 a12 a13 a14 a15 a16 a17 a18 a19 a20 a21 u1 u2 u3 u4 j1 j2 j3 j4 j5 j6 j7 j8a j9a j10a"/>
+    <flow id="0b1a" color="255,0,255" begin="0" end="3450" number="104" type="Car" route="Col-B4Redon3"/>
+    <flow id="0b1c" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Col-B4Redon2"/>
+    <flow id="0b1e" color="255,0,255" begin="0" end="3450" number="10" type="Car" route="Col-B4Redon1"/>
+    <flow id="0d1" color="255,128,0" begin="0" end="3450" type="Moto" number="13" route="Col-B4Redon2"/>
+    <flow id="0e1" color="255,255,0" begin="0" end="3450" number="25" type="Taxi" route="Col-B4Redon3"/>
+    <flow id="0g2" color="255,255,255" begin="0" end="3450" number="16" type="Truck" route="Col-B4Redon2"/>
+    <flow id="1b1a" color="255,0,255" begin="0" end="3450" number="75" type="Car" route="Col-Panam3"/>
+    <flow id="1b1c" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Col-Panam2"/>
+    <flow id="1d1" color="255,128,0" begin="0" end="3450" type="Moto" number="7" route="Col-Panam2"/>
+    <flow id="1e1" color="255,255,0" begin="0" end="3450" number="10" type="Taxi" route="Col-Panam2"/>
+    <flow id="2b1a" color="255,0,255" begin="0" end="3450" number="58" type="Car" route="Col-Termi3"/>
+    <flow id="2e1" color="255,255,0" begin="0" end="3450" number="15" type="Taxi" route="Col-Termi1"/>
+    <flow id="3b1a" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Col-Redon-Merc3"/>
+    <flow id="4b1a" color="255,0,255" begin="0" end="3450" number="17" type="Car" route="Col-Redon-Obel3"/>
+    <flow id="4e1a" color="255,255,0" begin="0" end="3450" number="7" type="Taxi" route="Col-Redon-Obel2"/>
+    <flow id="5b1a" color="255,0,255" begin="0" end="3450" number="18" type="Car" route="Merc-Fray-Panam3"/>
+    <flow id="5e1a" color="255,255,0" begin="0" end="3450" number="7" type="Taxi" route="Merc-Fray-Panam2"/>
+    <flow id="6b1b" color="255,0,255" begin="0" end="3450" number="4" type="Car" route="Mari-Fray-Redon-Panam2"/>
+    <flow id="7b1" color="255,0,255" begin="0" end="3450" number="5" type="Car" route="Obel-Fray-Redon-Panam3"/>
+    <flow id="8a1" color="0,255,255" begin="0" end="3450" number="4" type="Bus" route="Obel-B4Redon1"/>
+    <flow id="8b1a" color="255,0,255" begin="0" end="3450" number="97" type="Car" route="Obel-B4Redon3"/>
+    <flow id="8b1c" color="255,0,255" begin="0" end="3450" number="30" type="Car" route="Obel-B4Redon1"/>
+    <flow id="8d1" color="255,128,0" begin="0" end="3450" type="Moto" number="14" route="Obel-B4Redon2"/>
+    <flow id="8e1" color="255,255,0" begin="0" end="3450" number="39" type="Taxi" route="Merc-Fray-Panam2"/>
+    <flow id="9a1a" color="0,255,255" begin="0" end="3450" number="8" type="Bus" route="Obel-Redon-Panam1"/>
+    <flow id="9b1a" color="255,0,255" begin="0" end="3450" number="50" type="Car" route="Obel-Redon-Panam3"/>
+    <flow id="9b1b" color="255,0,255" begin="0" end="3450" number="13" type="Car" route="Obel-Redon-Panam2"/>
+    <flow id="9e1a" color="255,255,0" begin="0" end="3450" number="12" type="Taxi" route="Obel-Redon-Panam2"/>
+    <flow id="10b1a" color="255,0,255" begin="0" end="3450" number="29" type="Car" route="Obel-Redon-Col3"/>
+    <flow id="10d1a" color="255,128,0" begin="0" end="3450" number="3" type="Moto" route="Obel-Redon-Col1"/>
+    <flow id="10e1a" color="255,255,0" begin="0" end="3450" number="21" type="Taxi" route="Obel-Redon-Col2"/>
+    <flow id="11a1a" color="0,255,255" begin="0" end="3450" number="11" type="Bus" route="Obel-Redon-Panam1"/>
+    <flow id="11b1a" color="255,0,255" begin="0" end="3450" number="37" type="Car" route="Obel-Redon-Termi3"/>
+    <flow id="11d1a" color="255,128,0" begin="0" end="3450" number="2" type="Moto" route="Obel-Redon-Termi1"/>
+    <flow id="11e1a" color="255,255,0" begin="0" end="3450" number="15" type="Taxi" route="Obel-Redon-Termi2"/>
+    <flow id="12b1d" color="255,0,255" begin="0" end="3450" number="9" type="Car" route="Merc-Redon-Panam3"/>
+    <flow id="12e1a" color="255,255,0" begin="0" end="3450" number="8" type="Taxi" route="Merc-Redon-Panam2"/>
+    <flow id="13e1a" color="255,255,0" begin="0" end="3450" number="5" type="Taxi" route="Merc-Redon-Col3"/>
+    <flow id="14e1a" color="255,255,0" begin="0" end="3450" number="4" type="Taxi" route="Merc-Redon-Yach3"/>
+    <flow id="15b1a" color="255,0,255" begin="0" end="3450" number="24" type="Car" route="Obel-Fray-B4Pan3"/>
+    <flow id="15e1" color="255,255,0" begin="0" end="3600" number="18" type="Taxi" route="Obel-Fray-B4Pan2"/>
+    <flow id="16b1a" color="255,0,255" begin="0" end="3450" number="13" type="Car" route="Obel-Fray-Yach3"/>
+    <flow id="16e1a" color="255,255,0" begin="0" end="3450" number="8" type="Taxi" route="Obel-Fray-Yach2"/>
+    <flow id="17b1d" color="255,0,255" begin="0" end="3450" number="15" type="Car" route="Obel-Fray-Col3"/>
+    <flow id="17e1a" color="255,255,0" begin="0" end="3450" number="11" type="Taxi" route="Obel-Fray-Col2"/>
+    <flow id="18b1a" color="255,0,255" begin="0" end="3450" number="58" type="Car" route="Merc-Fray-B4Pan3"/>
+    <flow id="18d1a" color="255,128,0" begin="0" end="3450" number="12" type="Moto" route="Merc-Fray-B4Pan1"/>
+    <flow id="18e1c" color="255,255,0" begin="0" end="3450" number="32" type="Taxi" route="Merc-Fray-B4Pan2"/>
+    <flow id="18e1d" color="255,255,0" begin="0" end="3450" number="13" type="Taxi" route="Merc-Fray-B4Pan3"/>
+    <flow id="18g1a" color="255,255,255" begin="0" end="3450" number="6" type="Truck" route="Merc-Fray-B4Pan2"/>
+    <flow id="18g1c" color="255,255,255" begin="0" end="3450" number="7" type="Truck" route="Merc-Fray-B4Pan3"/>
+    <flow id="19b1a" color="255,0,255" begin="0" end="3450" number="21" type="Car" route="Merc-Fray-Yach3"/>
+    <flow id="19d1a" color="255,128,0" begin="0" end="3450" number="6" type="Moto" route="Merc-Fray-Yach1"/>
+    <flow id="19e1b" color="255,255,0" begin="0" end="3450" number="18" type="Taxi" route="Merc-Fray-Yach2"/>
+    <flow id="20b1a" color="255,0,255" begin="0" end="3450" number="35" type="Car" route="Merc-Fray-Col3"/>
+    <flow id="20b1c" color="255,0,255" begin="0" end="3450" number="12" type="Car" route="Merc-Fray-Col2"/>
+    <flow id="20d1a" color="255,128,0" begin="0" end="3450" number="8" type="Moto" route="Merc-Fray-Col1"/>
+    <flow id="20e1a" color="255,255,0" begin="0" end="3450" number="27" type="Taxi" route="Merc-Fray-Col2"/>
+    <flow id="20e1c" color="255,255,0" begin="0" end="3450" number="10" type="Taxi" route="Merc-Fray-Col3"/>
+    <flow id="21b1a" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Mari-Fray-Yach3"/>
+    <flow id="21e1c" color="255,255,0" begin="0" end="3450" number="4" type="Taxi" route="Mari-Fray-Yach2"/>
+    <flow id="22b1a" color="255,0,255" begin="0" end="3450" number="27" type="Car" route="Mari-Fray-Col3"/>
+    <flow id="22e1a" color="255,255,0" begin="0" end="3450" number="9" type="Taxi" route="Mari-Fray-Col2"/>
+    <flow id="22a1a" color="0,255,255" begin="0" end="3450" number="11" type="Bus" route="Mari-Fray-Col1"/>
+    <flow id="a23a1a" color="0,255,255" begin="0" end="3450" number="8" type="Bus" route="Panam-Mari-B4Mall1"/>
+    <flow id="a23b1a" color="255,0,255" begin="0" end="3450" number="115" type="Car" route="Panam-Mari-B4Mall3"/>
+    <flow id="a23b1c" color="255,0,255" begin="0" end="3450" number="30" type="Car" route="Panam-Mari-B4Mall2"/>
+    <flow id="a23c1c" color="255,0,255" begin="0" end="3450" number="7" type="Other" route="Panam-Mari-B4Mall1"/>
+    <flow id="a23d1a" color="255,128,0" begin="0" end="3450" number="15" type="Moto" route="Panam-Mari-B4Mall2"/>
+    <flow id="a23e1a" color="255,255,0" begin="0" end="3450" number="32" type="Taxi" route="Panam-Mari-B4Mall2"/>
+    <flow id="a23e1c" color="255,255,0" begin="0" end="3450" number="10" type="Taxi" route="Panam-Mari-B4Mall3"/>
+    <flow id="23b1a" color="255,0,255" begin="0" end="3450" number="34" type="Car" route="Panam-Mari-Obel3"/>
+    <flow id="23b1c" color="255,0,255" begin="0" end="3450" number="14" type="Car" route="Panam-Mari-Obel1"/>
+    <flow id="23e1a" color="255,255,0" begin="0" end="3450" number="15" type="Taxi" route="Panam-Mari-Obel2"/>
+    <flow id="24a1a" color="0,255,255" begin="0" end="3450" number="5" type="Bus" route="Panam-Mari-Merc1"/>
+    <flow id="24b1e1" color="255,0,255" begin="0" end="3450" number="41" type="Car" route="Panam-Mari-Merc3"/>
+    <flow id="24b1e3" color="255,0,255" begin="0" end="3450" number="11" type="Car" route="Panam-Mari-Merc1"/>
+    <flow id="24d1a" color="255,128,0" begin="0" end="3450" number="8" type="Moto" route="Panam-Mari-Merc1"/>
+    <flow id="24e1c" color="255,255,0" begin="0" end="3450" number="24" type="Taxi" route="Panam-Mari-Merc2"/>
+    <flow id="26b1a" color="255,0,255" begin="0" end="3450" number="37" type="Car" route="Panam-Mari-Fray-Col3"/>
+    <flow id="26d1a" color="255,128,0" begin="0" end="2450" number="5" type="Moto" route="Panam-Mari-Fray-Col1"/>
+    <flow id="26e1c" color="255,255,0" begin="0" end="3250" number="7" type="Taxi" route="Panam-Mari-Fray-Col2"/>
+    <flow id="27b1a" color="255,0,255" begin="0" end="3450" number="35" type="Car" route="Panam-Mari-Fray-Yach3"/>
+    <flow id="27e1a" color="255,255,0" begin="0" end="3450" number="2" type="Taxi" route="Panam-Mari-Fray-Yach2"/>
+    <flow id="a28a1a" color="0,255,255" begin="0" end="3450" number="8" type="Bus" route="Termi-B4Pan1"/>
+    <flow id="a28b1a" color="255,0,255" begin="0" end="3450" number="85" type="Car" route="Termi-B4Pan3"/>
+    <flow id="a28b1c" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Termi-B4Pan2"/>
+    <flow id="a28e1a" color="255,255,0" begin="0" end="3450" number="17" type="Taxi" route="Termi-B4Pan3"/>
+    <flow id="a28g1" color="255,255,255" begin="0" end="3450" number="12" type="Truck" route="Termi-B4Pan2"/>
+    <flow id="28a1a" color="0,255,255" begin="0" end="3450" number="3" type="Bus" route="Termi-Yach1"/>
+    <flow id="28b1a" color="255,0,255" begin="0" end="3450" number="33" type="Car" route="Termi-Yach3"/>
+    <flow id="28e1a" color="255,255,0" begin="0" end="3450" number="8" type="Taxi" route="Termi-Yach2"/>
+    <flow id="29a1b" color="0,255,255" begin="0" end="3450" number="7" type="Bus" route="Termi-Col1"/>
+    <flow id="29b1b" color="255,0,255" begin="0" end="3450" number="43" type="Car" route="Termi-Col3"/>
+    <flow id="29b1d" color="255,0,255" begin="0" end="3450" number="9" type="Car" route="Termi-Col1"/>
+    <flow id="29d1a" color="255,128,0" begin="0" end="3450" number="6" type="Moto" route="Termi-Col2"/>
+    <flow id="29e1a" color="255,255,0" begin="0" end="3450" number="9" type="Taxi" route="Termi-Col2"/>
+    <flow id="29g1a" color="255,255,255" begin="0" end="3450" number="7" type="Truck" route="Termi-Col3"/>
+    <flow id="30b1a" color="255,0,255" begin="0" end="3600" number="16" type="Car" route="Termi-Pan-Obel2"/>
+    <flow id="31b1a" color="255,0,255" begin="0" end="3600" number="17" type="Car" route="Termi-Pan-Merc3"/>
+    <flow id="31e1" color="255,255,0" begin="0" end="3600" number="7" type="Taxi" route="Termi-Pan-Merc2"/>
+    <flow id="32a1a" color="0,255,255" begin="0" end="3450" number="33" type="Bus" route="Termi-Panam2"/>
+    <flow id="32b1a" color="255,0,255" begin="0" end="3450" number="69" type="Car" route="Termi-Panam3"/>
+    <flow id="32b1c" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Termi-Panam1"/>
+    <flow id="32d1a" color="255,128,0" begin="0" end="3450" number="12" type="Moto" route="Termi-Panam1"/>
+    <flow id="32e1a" color="255,255,0" begin="0" end="3450" number="32" type="Taxi" route="Termi-Panam2"/>
+    <flow id="32e1c" color="255,255,0" begin="0" end="3450" number="10" type="Taxi" route="Termi-Panam1"/>
+    <flow id="a33b1a" color="255,0,255" begin="0" end="3450" number="132" type="Car" route="Panam-B4Pan3"/>
+    <flow id="a33b1c" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Panam-B4Pan1"/>
+    <flow id="a33d1a" color="255,128,0" begin="0" end="3450" number="7" type="Moto" route="Panam-B4Pan2"/>
+    <flow id="a33e1a" color="255,255,0" begin="0" end="3450" number="15" type="Taxi" route="Panam-B4Pan2"/>
+    <flow id="33b1a" color="255,0,255" begin="0" end="3450" number="42" type="Car" route="Panam-Col3"/>
+    <flow id="33b1c" color="255,0,255" begin="0" end="3450" number="15" type="Car" route="Panam-Col1"/>
+    <flow id="33d1a" color="255,128,0" begin="0" end="3450" number="9" type="Moto" route="Panam-Col1"/>
+    <flow id="33e1a" color="255,255,0" begin="0" end="3450" number="18" type="Taxi" route="Panam-Col2"/>
+    <flow id="34b1a" color="255,0,255" begin="0" end="3450" number="33" type="Car" route="Panam-Yach3"/>
+    <flow id="35b1a" color="255,0,255" begin="0" end="3450" number="12" type="Car" route="Panam-Pan-Obel3"/>
+    <flow id="36b1a" color="255,0,255" begin="0" end="3450" number="15" type="Car" route="Panam-Pan-Merc3"/>
+    <flow id="36e2" color="255,255,0" begin="0" end="3600" number="4" type="Taxi" route="Panam-Pan-Merc2"/>
+    <flow id="a37b1a" color="255,0,255" begin="0" end="3450" number="110" type="Car" route="Yach-B4Mall3"/>
+    <flow id="a37b1c" color="255,0,255" begin="0" end="3450" number="22" type="Car" route="Yach-B4Mall1"/>
+    <flow id="a37d1a" color="255,128,0" begin="0" end="3450" number="20" type="Moto" route="Yach-B4Mall2"/>
+    <flow id="a37e1b" color="255,255,0" begin="0" end="3450" number="50" type="Taxi" route="Yach-B4Mall2"/>
+    <flow id="a37e1e" color="255,255,0" begin="0" end="3450" number="11" type="Taxi" route="Yach-B4Mall1"/>
+    <flow id="37b1a" color="255,0,255" begin="0" end="3450" number="31" type="Car" route="Yach-Obel3"/>
+    <flow id="37d1a" color="255,128,0" begin="0" end="3450" number="4" type="Moto" route="Yach-Obel1"/>
+    <flow id="37e1a" color="255,255,0" begin="0" end="3450" number="4" type="Taxi" route="Yach-Obel2"/>
+    <flow id="38b1a" color="255,0,255" begin="0" end="3450" number="29" type="Car" route="Yach-Merc3"/>
+    <flow id="38d1a" color="255,128,0" begin="0" end="3450" number="4" type="Moto" route="Yach-Merc1"/>
+    <flow id="38e1a" color="255,255,0" begin="0" end="3450" number="7" type="Taxi" route="Yach-Merc2"/>
+    <flow id="39b1a" color="255,0,255" begin="0" end="3450" number="22" type="Car" route="Col-Fray-Merc3"/>
+    <flow id="39d1a" color="255,128,0" begin="0" end="3450" number="6" type="Moto" route="Col-Fray-Merc1"/>
+    <flow id="39e1" color="255,255,0" begin="0" end="3450" number="6" type="Taxi" route="Col-Fray-Merc2"/>
+    <flow id="40b1a" color="255,0,255" begin="0" end="3450" number="24" type="Car" route="Col-Fray-Obel3"/>
+    <flow id="40d1a" color="255,128,0" begin="0" end="3450" number="7" type="Moto" route="Col-Fray-Obel1"/>
+    <flow id="40e1b" color="255,255,0" begin="0" end="3450" number="6" type="Taxi" route="Col-Fray-Obel2"/>
+    <flow id="41b1a" color="255,0,255" begin="0" end="3450" number="21" type="Car" route="Col-Fray-Redon-Panam3"/>
+    <flow id="42b1a" color="255,0,255" begin="0" end="3450" number="24" type="Car" route="Col-Fray-Redon-Termi3"/>
+    <flow id="43b1a" color="255,0,255" begin="0" end="3450" number="8" type="Car" route="Yach-Fray-Redon-Panam3"/>
+    <flow id="44b1a" color="255,0,255" begin="0" end="3450" number="7" type="Car" route="Yach-Fray-Redon-Termi3"/>
+    <flow id="45b1a" color="255,0,255" begin="0" end="3450" number="19" type="Car" route="Col-Fray-B4Redon3"/>
+    <flow id="45d1a" color="255,128,0" begin="0" end="3450" number="10" type="Moto" route="Col-Fray-B4Redon2"/>
+    <flow id="45e1b" color="255,255,0" begin="0" end="3450" number="8" type="Taxi" route="Col-Fray-B4Redon1"/>
+    <flow id="46b1a" color="255,0,255" begin="0" end="3450" number="20" type="Car" route="Merc-B4Redon3"/>
+    <flow id="46d1a" color="255,128,0" begin="0" end="3450" number="4" type="Moto" route="Merc-B4Redon1"/>
+    <flow id="46e1b" color="255,255,0" begin="0" end="3450" number="20" type="Taxi" route="Merc-B4Redon2"/>
+    <flow id="47b1a" color="255,0,255" begin="0" end="3450" number="8" type="Car" route="Merc-Redon-Termi3"/>
+    <flow id="47e1b" color="255,255,0" begin="0" end="3450" number="6" type="Taxi" route="Merc-Redon-Termi2"/>
+    <flow id="48b1a" color="255,0,255" begin="0" end="3450" number="19" type="Car" route="Merc-Fray-B4Redon3"/>
+    <flow id="48d1a" color="255,128,0" begin="0" end="3450" number="2" type="Moto" route="Merc-Fray-B4Redon2"/>
+    <flow id="48e1b" color="255,255,0" begin="0" end="3450" number="4" type="Taxi" route="Merc-Fray-B4Redon1"/>
+    <flow id="49b1a" color="255,0,255" begin="0" end="3450" number="17" type="Car" route="Merc-Fray-Termi3"/>
+    <flow id="50b1a" color="255,0,255" begin="0" end="3450" number="7" type="Car" route="Mari-Fray-B4Redon3"/>
+    <flow id="51b1a" color="255,0,255" begin="0" end="3450" number="12" type="Car" route="Mari-Fray-B4Pan3"/>
+    <flow id="51e1b" color="255,255,0" begin="0" end="3450" type="Taxi" number="8" route="Mari-Fray-B4Pan2"/>
+    <flow id="53b1a" color="255,0,255" begin="0" end="3450" number="7" type="Car" route="Obel-Redon-Yach3"/>
+    <flow id="53e1b" color="255,255,0" begin="0" end="3450" type="Taxi" number="7" route="Obel-Redon-Yach2"/>
+    <flow id="54b1a" color="255,0,255" begin="0" end="3450" number="4" type="Car" route="Obel-Fray-B4Redon3"/>
+    <flow id="55a1a" color="0,255,255" begin="0" end="3450" number="3" type="Bus" route="Obel-Fray-Redon-Termi1"/>
+    <flow id="55b1a" color="255,0,255" begin="0" end="3450" number="2" type="Car" route="Obel-Fray-Redon-Termi2"/>
+    <flow id="56b1a" color="255,0,255" begin="0" end="3450" number="57" type="Car" route="Panam-Mari-Fray-B4Pan3"/>
+    <flow id="56d1a" color="255,128,0" begin="0" end="2450" number="4" type="Moto" route="Panam-Mari-Fray-B4Pan1"/>
+    <flow id="56e1c" color="255,255,0" begin="0" end="3250" number="14" type="Taxi" route="Panam-Mari-Fray-B4Pan2"/>
+    <flow id="57b1a" color="255,0,255" begin="0" end="3450" number="45" type="Car" route="Obel-Redon-Yach3"/>
+    <flow id="57e1b" color="255,255,0" begin="0" end="3450" type="Taxi" number="13" route="Obel-Redon-Yach2"/>
+    <flow id="58b1a" color="255,0,255" begin="0" end="3450" number="250" type="Car" route="Panam-Termi3"/>
+    <flow id="59b1" color="255,0,255" begin="0" end="3450" number="65" type="Car" route="Yach-Mari-B4Redon3"/>
+    <flow id="59b2" color="255,0,255" begin="0" end="3450" number="10" type="Car" route="Yach-Mari-B4Redon1"/>
+    <flow id="59d1a" color="255,128,0" begin="0" end="3450" number="7" type="Moto" route="Yach-Mari-B4Redon1"/>
+    <flow id="59e1b" color="255,255,0" begin="0" end="3450" number="19" type="Taxi" route="Yach-Mari-B4Redon2"/>
+    <vehicle id="27a1" color="0,255,255" depart="20" end="3600" type="Bus" route="Panam-Mari-Fray-Yach2"/>
+    <vehicle id="a33g1" color="255,255,255" depart="25" end="3600" type="Truck" route="Panam-B4Pan2"/>
+    <vehicle id="33g1" color="255,255,255" depart="25" end="3600" type="Truck" route="Panam-Col2"/>
+    <vehicle id="23a1" color="0,255,255" depart="30" end="3600" type="Bus" route="Panam-Mari-Obel1"/>
+    <vehicle id="28g1" color="255,255,255" depart="40" end="3600" type="Truck" route="Termi-Yach2"/>
+    <vehicle id="24g1" color="255,255,255" depart="50" end="3600" type="Truck" route="Panam-Mari-Merc1"/>
+    <vehicle id="23c1" color="255,0,127" depart="69" end="3600" type="Other" route="Panam-Mari-Obel1"/>
+    <vehicle id="24c1" color="255,0,127" depart="75" end="3600" type="Other" route="Panam-Mari-Merc1"/>
+    <vehicle id="17d1" color="255,128,0" depart="88" end="3600" type="Moto" route="Obel-Fray-Col1"/>
+    <vehicle id="1a1" color="0,255,255" depart="90" end="3600" type="Bus" route="Col-Panam1"/>
+    <vehicle id="15a1" color="0,255,255" depart="90" end="3600" type="Bus" route="Obel-Fray-B4Pan1"/>
+    <vehicle id="26a1" color="0,255,255" depart="90" end="3600" type="Bus" route="Panam-Mari-Fray-Col1"/>
+    <vehicle id="40g1" color="255,255,255" depart="92" end="3600" type="Truck" route="Col-Fray-Obel2"/>
+    <vehicle id="3e1" color="255,255,0" depart="106" end="3600" type="Taxi" route="Col-Redon-Merc1"/>
+    <vehicle id="20c1" color="255,0,127" depart="132" end="3600" type="Other" route="Merc-Fray-Col1"/>
+    <vehicle id="15c1" color="255,0,127" depart="159" end="3600" type="Other" route="Obel-Fray-B4Pan2"/>
+    <vehicle id="56a1" color="0,255,255" depart="190" end="3600" type="Bus" route="Panam-Mari-Fray-B4Pan1"/>
+    <vehicle id="a37a1" color="0,255,255" depart="200" end="3600" type="Bus" route="Yach-B4Mall2"/>
+    <vehicle id="3d1" color="255,128,0" depart="206" end="3600" type="Moto" route="Col-Redon-Merc1"/>
+    <vehicle id="2c2" color="255,0,127" depart="218" end="3600" type="Other" route="Col-Termi2"/>
+    <vehicle id="14b1" color="255,0,255" depart="250" end="3600" type="Car" route="Merc-Redon-Yach1"/>
+    <vehicle id="a28d1" color="255,128,0" depart="258" end="3600" type="Moto" route="Termi-B4Pan2"/>
+    <vehicle id="35e1" color="255,255,0" depart="260" end="3600" type="Taxi" route="Panam-Pan-Obel3"/>
+    <vehicle id="22g1" color="255,255,255" depart="269" end="3600" type="Truck" route="Mari-Fray-Col2"/>
+    <vehicle id="4g1" color="255,255,255" depart="270" end="3600" type="Truck" route="Col-Redon-Obel2"/>
+    <vehicle id="19a1" color="0,255,255" depart="280" end="3600" type="Bus" route="Merc-Fray-Yach2"/>
+    <vehicle id="26c1" color="255,0,127" depart="289" end="3600" type="Other" route="Panam-Mari-Fray-Col1"/>
+    <vehicle id="56c1" color="255,0,127" depart="289" end="3600" type="Other" route="Panam-Mari-Fray-B4Pan1"/>
+    <vehicle id="4d1" color="255,128,0" depart="292" end="3600" type="Moto" route="Col-Redon-Obel2"/>
+    <vehicle id="23d1" color="255,128,0" depart="298" end="3600" type="Moto" route="Panam-Mari-Obel1"/>
+    <vehicle id="39a1" color="0,255,255" depart="300" end="3600" type="Bus" route="Col-Fray-Merc1"/>
+    <vehicle id="29c1" color="255,0,127" depart="309" end="3600" type="Other" route="Termi-Col2"/>
+    <vehicle id="32c1" color="255,0,127" depart="344" end="3600" type="Other" route="Termi-Panam2"/>
+    <vehicle id="38c1" color="255,0,127" depart="358" end="3600" type="Other" route="Yach-Merc1"/>
+    <vehicle id="28c1" color="255,0,127" depart="359" end="3600" type="Other" route="Termi-Yach1"/>
+    <vehicle id="34c1" color="255,0,127" depart="368" end="3600" type="Other" route="Panam-Yach1"/>
+    <vehicle id="10c1" color="255,0,127" depart="389" end="3600" type="Other" route="Obel-Redon-Col2"/>
+    <vehicle id="12c1" color="255,0,127" depart="399" end="3600" type="Other" route="Merc-Redon-Panam1"/>
+    <vehicle id="34g1" color="255,255,255" depart="409" end="3600" type="Truck" route="Panam-Yach1"/>
+    <vehicle id="23a2" color="0,255,255" depart="420" end="3600" type="Bus" route="Panam-Mari-Obel2"/>
+    <vehicle id="40c1" color="255,0,127" depart="438" end="3600" type="Other" route="Col-Fray-Obel1"/>
+    <vehicle id="41c1" color="255,0,127" depart="438" end="3600" type="Other" route="Col-Fray-Redon-Panam2"/>
+    <vehicle id="38g1" color="255,255,255" depart="460" end="3600" type="Truck" route="Yach-Merc2"/>
+    <vehicle id="1c1" color="255,0,127" depart="480" end="3600" type="Other" route="Col-Panam3"/>
+    <vehicle id="1a2" color="0,255,255" depart="520" end="3600" type="Bus" route="Col-Panam2"/>
+    <vehicle id="42e1" color="255,255,0" depart="530" end="3600" type="Taxi" route="Col-Fray-Redon-Termi3"/>
+    <vehicle id="16g1" color="255,255,255" depart="539" end="3600" type="Truck" route="Obel-Fray-Yach1"/>
+    <vehicle id="28f1" color="255,0,0" depart="545" end="3600" type="Trail" route="Termi-Yach3"/>
+    <vehicle id="43e1" color="255,255,0" depart="555" end="3600" type="Taxi" route="Yach-Fray-Redon-Panam3"/>
+    <vehicle id="20g1" color="255,255,255" depart="560" end="3600" type="Truck" route="Merc-Fray-Col1"/>
+    <vehicle id="35g1" color="255,255,255" depart="571" end="3600" type="Truck" route="Panam-Pan-Obel1"/>
+    <vehicle id="3d2" color="255,128,0" depart="576" end="3600" type="Moto" route="Col-Redon-Merc2"/>
+    <vehicle id="18c1" color="255,0,127" depart="589" end="3600" type="Other" route="Merc-Fray-B4Pan2"/>
+    <vehicle id="39g1" color="255,255,255" depart="592" end="3600" type="Truck" route="Col-Fray-Merc1"/>
+    <vehicle id="35d1" color="255,128,0" depart="598" end="3600" type="Moto" route="Panam-Pan-Obel2"/>
+    <vehicle id="16d1" color="255,128,0" depart="620" end="3600" type="Moto" route="Obel-Fray-Yach1"/>
+    <vehicle id="26a2" color="0,255,255" depart="620" end="3600" type="Bus" route="Panam-Mari-Fray-Col2"/>
+    <vehicle id="a33g2" color="255,255,255" depart="625" end="3600" type="Truck" route="Panam-B4Pan1"/>
+    <vehicle id="33g2" color="255,255,255" depart="625" end="3600" type="Truck" route="Panam-Col1"/>
+    <vehicle id="24c2" color="255,0,127" depart="628" end="3600" type="Other" route="Panam-Mari-Merc2"/>
+    <vehicle id="1g1" color="255,255,255" depart="650" end="3600" type="Truck" route="Col-Panam2"/>
+    <vehicle id="21g1" color="255,255,255" depart="652" end="3600" type="Truck" route="Mari-Fray-Yach1"/>
+    <vehicle id="41e1" color="255,255,0" depart="660" end="3600" type="Taxi" route="Col-Fray-Redon-Panam2"/>
+    <vehicle id="3e2" color="255,255,0" depart="667" end="3600" type="Taxi" route="Col-Redon-Merc1"/>
+    <vehicle id="12d1" color="255,128,0" depart="672" end="3600" type="Moto" route="Merc-Redon-Panam2"/>
+    <vehicle id="27d1" color="255,128,0" depart="678" end="3600" type="Moto" route="Panam-Mari-Fray-Yach2"/>
+    <vehicle id="36d1" color="255,128,0" depart="678" end="3600" type="Moto" route="Panam-Pan-Merc2"/>
+    <vehicle id="9d1" color="255,128,0" depart="720" end="3600" type="Moto" route="Obel-Redon-Panam3"/>
+    <vehicle id="56a2" color="0,255,255" depart="720" end="3600" type="Bus" route="Panam-Mari-Fray-B4Pan2"/>
+    <vehicle id="2g1" color="255,255,255" depart="750" end="3600" type="Truck" route="Col-Termi1"/>
+    <vehicle id="13b1" color="255,0,255" depart="750" end="3600" type="Car" route="Merc-Redon-Col3"/>
+    <vehicle id="23d2" color="255,128,0" depart="758" end="3600" type="Moto" route="Panam-Mari-Obel2"/>
+    <vehicle id="23a3" color="0,255,255" depart="760" end="3600" type="Bus" route="Panam-Mari-Obel3"/>
+    <vehicle id="a23g1" color="255,255,255" depart="762" end="3600" type="Truck" route="Panam-Mari-B4Mall1"/>
+    <vehicle id="23g1" color="255,255,255" depart="762" end="3600" type="Truck" route="Panam-Mari-Obel1"/>
+    <vehicle id="a28d2" color="255,128,0" depart="767" end="3600" type="Moto" route="Termi-B4Pan1"/>
+    <vehicle id="26g1" color="255,255,255" depart="790" end="3600" type="Truck" route="Panam-Mari-Fray-Col2"/>
+    <vehicle id="56g1" color="255,255,255" depart="790" end="3600" type="Truck" route="Panam-Mari-Fray-B4Pan2"/>
+    <vehicle id="34e1" color="255,255,0" depart="800" end="3600" type="Taxi" route="Panam-Yach1"/>
+    <vehicle id="51c1" color="255,0,127" depart="809" end="3600" type="Other" route="Mari-Fray-B4Pan2"/>
+    <vehicle id="28g2" color="255,255,255" depart="820" end="3600" type="Truck" route="Termi-Yach3"/>
+    <vehicle id="35e2" color="255,255,0" depart="860" end="3600" type="Taxi" route="Panam-Pan-Obel3"/>
+    <vehicle id="15a2" color="0,255,255" depart="870" end="3600" type="Bus" route="Obel-Fray-B4Pan2"/>
+    <vehicle id="11c1" color="255,0,127" depart="889" end="3600" type="Other" route="Obel-Redon-Termi2"/>
+    <vehicle id="a37c1" color="255,0,127" depart="909" end="3600" type="Other" route="Yach-B4Mall2"/>
+    <vehicle id="45c1" color="255,0,127" depart="909" end="3600" type="Other" route="Col-Fray-B4Redon2"/>
+    <vehicle id="48c1" color="255,0,127" depart="909" end="3600" type="Other" route="Merc-Fray-B4Redon2"/>
+    <vehicle id="59c1" color="255,0,127" depart="909" end="3600" type="Other" route="Yach-Mari-B4Redon2"/>
+    <vehicle id="1g2" color="255,255,255" depart="930" end="3600" type="Truck" route="Col-Panam2"/>
+    <vehicle id="4g2" color="255,255,255" depart="930" end="3600" type="Truck" route="Col-Redon-Obel2"/>
+    <vehicle id="1c2" color="255,0,127" depart="950" end="3600" type="Other" route="Col-Panam2"/>
+    <vehicle id="a37g1" color="255,255,255" depart="991" end="3600" type="Truck" route="Yach-B4Mall1"/>
+    <vehicle id="45g1" color="255,255,255" depart="991" end="3600" type="Truck" route="Col-Fray-B4Redon1"/>
+    <vehicle id="4d2" color="255,128,0" depart="992" end="3600" type="Moto" route="Col-Redon-Obel1"/>
+    <vehicle id="24g2" color="255,255,255" depart="997" end="3600" type="Truck" route="Panam-Mari-Merc2"/>
+    <vehicle id="15g1" color="255,255,255" depart="1000" end="3600" type="Truck" route="Obel-Fray-B4Pan1"/>
+    <vehicle id="42d1" color="255,128,0" depart="1010" end="3600" type="Moto" route="Col-Fray-Redon-Termi1"/>
+    <vehicle id="3d3" color="255,128,0" depart="1036" end="3600" type="Moto" route="Col-Redon-Merc1"/>
+    <vehicle id="16d2" color="255,128,0" depart="1040" end="3600" type="Moto" route="Obel-Fray-Yach2"/>
+    <vehicle id="1f1" color="255,0,0" depart="1050" end="3600" type="Trail" route="Col-Panam3"/>
+    <vehicle id="38g2" color="255,255,255" depart="1055" end="3600" type="Truck" route="Yach-Merc1"/>
+    <vehicle id="32g1" color="255,255,255" depart="1085" end="3600" type="Truck" route="Termi-Panam1"/>
+    <vehicle id="26c2" color="255,0,127" depart="1089" end="3600" type="Other" route="Panam-Mari-Fray-Col2"/>
+    <vehicle id="56c2" color="255,0,127" depart="1089" end="3600" type="Other" route="Panam-Mari-Fray-B4Pan2"/>
+    <vehicle id="35g2" color="255,255,255" depart="1120" end="3600" type="Truck" route="Panam-Pan-Obel3"/>
+    <vehicle id="12d2" color="255,128,0" depart="1122" end="3600" type="Moto" route="Merc-Redon-Panam2"/>
+    <vehicle id="40g2" color="255,255,255" depart="1122" end="3600" type="Truck" route="Col-Fray-Obel3"/>
+    <vehicle id="2g2" color="255,255,255" depart="1130" end="3600" type="Truck" route="Col-Termi2"/>
+    <vehicle id="34d1" color="255,128,0" depart="1149" end="3600" type="Moto" route="Panam-Yach2"/>
+    <vehicle id="19g1" color="255,255,255" depart="1157" end="3600" type="Truck" route="Merc-Fray-Yach2"/>
+    <vehicle id="a28d3" color="255,128,0" depart="1158" end="3600" type="Moto" route="Termi-B4Pan2"/>
+    <vehicle id="1a3" color="0,255,255" depart="1160" end="3600" type="Bus" route="Col-Panam3"/>
+    <vehicle id="17d2" color="255,128,0" depart="1182" end="3600" type="Moto" route="Obel-Fray-Col1"/>
+    <vehicle id="23c2" color="255,0,127" depart="1189" end="3600" type="Other" route="Panam-Mari-Obel2"/>
+    <vehicle id="22c1" color="255,0,127" depart="1191" end="3600" type="Other" route="Mari-Fray-Col1"/>
+    <vehicle id="4d3" color="255,128,0" depart="1192" end="3600" type="Moto" route="Col-Redon-Obel3"/>
+    <vehicle id="28g3" color="255,255,255" depart="1199" end="3600" type="Truck" route="Termi-Yach2"/>
+    <vehicle id="a23g2" color="255,255,255" depart="1202" end="3600" type="Truck" route="Panam-Mari-B4Mall2"/>
+    <vehicle id="2d1" color="255,128,0" depart="1220" end="3600" type="Moto" route="Col-Termi1"/>
+    <vehicle id="24g3" color="255,255,255" depart="1240" end="3600" type="Truck" route="Panam-Mari-Merc1"/>
+    <vehicle id="3e3" color="255,255,0" depart="1257" end="3600" type="Taxi" route="Col-Redon-Merc2"/>
+    <vehicle id="a28c1" color="255,0,127" depart="1289" end="3600" type="Other" route="Termi-B4Pan2"/>
+    <vehicle id="29c2" color="255,0,127" depart="1309" end="3600" type="Other" route="Termi-Col1"/>
+    <vehicle id="24c3" color="255,0,127" depart="1320" end="3600" type="Other" route="Panam-Mari-Merc3"/>
+    <vehicle id="13b2" color="255,0,255" depart="1335" end="3600" type="Car" route="Merc-Redon-Col1"/>
+    <vehicle id="38a1" color="0,255,255" depart="1340" end="3600" type="Bus" route="Yach-Merc1"/>
+    <vehicle id="17g1" color="255,255,255" depart="1345" end="3600" type="Truck" route="Obel-Fray-Col1"/>
+    <vehicle id="3g1" color="255,255,255" depart="1350" end="3600" type="Truck" route="Col-Redon-Merc1"/>
+    <vehicle id="a33g3" color="255,255,255" depart="1350" end="3600" type="Truck" route="Panam-B4Pan3"/>
+    <vehicle id="33g3" color="255,255,255" depart="1350" end="3600" type="Truck" route="Panam-Col3"/>
+    <vehicle id="35e3" color="255,255,0" depart="1360" end="3600" type="Taxi" route="Panam-Pan-Obel2"/>
+    <vehicle id="2a1" color="0,255,255" depart="1370" end="3600" type="Bus" route="Col-Termi1"/>
+    <vehicle id="27c1" color="255,0,127" depart="1389" end="3600" type="Other" route="Panam-Mari-Fray-Yach2"/>
+    <vehicle id="4d4" color="255,128,0" depart="1392" end="3600" type="Moto" route="Col-Redon-Obel2"/>
+    <vehicle id="2d2" color="255,128,0" depart="1420" end="3600" type="Moto" route="Col-Termi2"/>
+    <vehicle id="14b2" color="255,0,255" depart="1450" end="3600" type="Car" route="Merc-Redon-Yach2"/>
+    <vehicle id="28d1" color="255,128,0" depart="1458" end="3600" type="Moto" route="Termi-Yach2"/>
+    <vehicle id="2ab" color="0,255,255" depart="1460" end="3600" type="Bus" route="Col-Termi1"/>
+    <vehicle id="41e2" color="255,255,0" depart="1460" end="3600" type="Taxi" route="Col-Fray-Redon-Panam2"/>
+    <vehicle id="42e2" color="255,255,0" depart="1460" end="3600" type="Taxi" route="Col-Fray-Redon-Termi2"/>
+    <vehicle id="8g1" color="255,255,255" depart="1462" end="3600" type="Truck" route="Obel-B4Redon1"/>
+    <vehicle id="39g2" color="255,255,255" depart="1462" end="3600" type="Truck" route="Col-Fray-Merc2"/>
+    <vehicle id="10c2" color="255,0,127" depart="1469" end="3600" type="Other" route="Obel-Redon-Col1"/>
+    <vehicle id="23a4" color="0,255,255" depart="1470" end="3600" type="Bus" route="Panam-Mari-Obel1"/>
+    <vehicle id="23d3" color="255,128,0" depart="1498" end="3600" type="Moto" route="Panam-Mari-Obel1"/>
+    <vehicle id="35d2" color="255,128,0" depart="1498" end="3600" type="Moto" route="Panam-Pan-Obel3"/>
+    <vehicle id="23g2" color="255,255,255" depart="1502" end="3600" type="Truck" route="Panam-Mari-Obel2"/>
+    <vehicle id="11g1" color="255,255,255" depart="1510" end="3600" type="Truck" route="Obel-Redon-Termi1"/>
+    <vehicle id="a37g2" color="255,255,255" depart="1520" end="3600" type="Truck" route="Yach-B4Mall2"/>
+    <vehicle id="27d2" color="255,128,0" depart="1528" end="3600" type="Moto" route="Panam-Mari-Fray-Yach1"/>
+    <vehicle id="20c2" color="255,0,127" depart="1529" end="3600" type="Other" route="Merc-Fray-Col2"/>
+    <vehicle id="40c2" color="255,0,127" depart="1538" end="3600" type="Other" route="Col-Fray-Obel2"/>
+    <vehicle id="1g3" color="255,255,255" depart="1550" end="3600" type="Truck" route="Col-Panam1"/>
+    <vehicle id="26a3" color="0,255,255" depart="1550" end="3600" type="Bus" route="Panam-Mari-Fray-Col3"/>
+    <vehicle id="2d3" color="255,128,0" depart="1560" end="3600" type="Moto" route="Col-Termi1"/>
+    <vehicle id="34e2" color="255,255,0" depart="1560" end="3600" type="Taxi" route="Panam-Yach3"/>
+    <vehicle id="36d2" color="255,128,0" depart="1568" end="3600" type="Moto" route="Panam-Pan-Merc1"/>
+    <vehicle id="3d4" color="255,128,0" depart="1576" end="3600" type="Moto" route="Col-Redon-Merc2"/>
+    <vehicle id="1c3" color="255,0,127" depart="1580" end="3600" type="Other" route="Col-Panam2"/>
+    <vehicle id="19c1" color="255,0,127" depart="1589" end="3600" type="Other" route="Merc-Fray-Yach2"/>
+    <vehicle id="12d3" color="255,128,0" depart="1592" end="3600" type="Moto" route="Merc-Redon-Panam1"/>
+    <vehicle id="16d3" color="255,128,0" depart="1596" end="3600" type="Moto" route="Obel-Fray-Yach2"/>
+    <vehicle id="9d2" color="255,128,0" depart="1640" end="3600" type="Moto" route="Obel-Redon-Panam2"/>
+    <vehicle id="51d1a" color="255,128,0" depart="1650" end="3600" type="Moto" route="Mari-Fray-B4Pan1"/>
+    <vehicle id="53d1a" color="255,128,0" depart="1650" end="3600" type="Moto" route="Obel-Redon-Yach1"/>
+    <vehicle id="56a3" color="0,255,255" depart="1650" end="3600" type="Bus" route="Panam-Mari-Fray-B4Pan3"/>
+    <vehicle id="20g2" color="255,255,255" depart="1660" end="3600" type="Truck" route="Merc-Fray-Col2"/>
+    <vehicle id="26c3" color="255,0,127" depart="1689" end="3600" type="Other" route="Panam-Mari-Fray-Col2"/>
+    <vehicle id="56c3" color="255,0,127" depart="1689" end="3600" type="Other" route="Panam-Mari-Fray-B4Pan2"/>
+    <vehicle id="30e1" color="255,255,0" depart="1693" end="3600" type="Taxi" route="Termi-Pan-Obel1"/>
+    <vehicle id="12g1" color="255,255,255" depart="1710" end="3600" type="Truck" route="Merc-Redon-Panam1"/>
+    <vehicle id="43e2" color="255,255,0" depart="1711" end="3600" type="Taxi" route="Yach-Fray-Redon-Panam1"/>
+    <vehicle id="22g2" color="255,255,255" depart="1722" end="3600" type="Truck" route="Mari-Fray-Col1"/>
+    <vehicle id="5d2" color="255,128,0" depart="1728" end="3600" type="Moto" route="Merc-Fray-Panam2"/>
+    <vehicle id="28g4" color="255,255,255" depart="1740" end="3600" type="Truck" route="Termi-Yach1"/>
+    <vehicle id="35c1" color="255,0,127" depart="1740" end="3600" type="Other" route="Panam-Pan-Obel1"/>
+    <vehicle id="a23g3" color="255,255,255" depart="1752" end="3600" type="Truck" route="Panam-Mari-B4Mall3"/>
+    <vehicle id="47d1a" color="255,128,0" depart="1770" end="3600" type="Moto" route="Merc-Redon-Termi1"/>
+    <vehicle id="49d1a" color="255,128,0" depart="1770" end="3600" type="Moto" route="Merc-Fray-Termi1"/>
+    <vehicle id="40g3" color="255,255,255" depart="1772" end="3600" type="Truck" route="Col-Fray-Obel2"/>
+    <vehicle id="5g1" color="255,255,255" depart="1796" end="3600" type="Truck" route="Merc-Fray-Panam1"/>
+    <vehicle id="26g2" color="255,255,255" depart="1799" end="3600" type="Truck" route="Panam-Mari-Fray-Col1"/>
+    <vehicle id="56g2" color="255,255,255" depart="1799" end="3600" type="Truck" route="Panam-Mari-Fray-B4Pan1"/>
+    <vehicle id="34g2" color="255,255,255" depart="1809" end="3600" type="Truck" route="Panam-Yach2"/>
+    <vehicle id="52b1" color="255,0,255" depart="1809" end="3600" type="Car" route="Mari-Fray-Redon-Termi2"/>
+    <vehicle id="17d3" color="255,128,0" depart="1828" end="3600" type="Moto" route="Obel-Fray-Col2"/>
+    <vehicle id="13d1" color="255,128,0" depart="1832" end="3600" type="Moto" route="Merc-Redon-Col3"/>
+    <vehicle id="0g1" color="255,255,255" depart="1850" end="3600" type="Truck" route="Col-B4Redon1"/>
+    <vehicle id="2g3" color="255,255,255" depart="1850" end="3600" type="Truck" route="Col-Termi2"/>
+    <vehicle id="4g3" color="255,255,255" depart="1850" end="3600" type="Truck" route="Col-Redon-Obel1"/>
+    <vehicle id="15d1" color="255,128,0" depart="1856" end="3600" type="Moto" route="Obel-Fray-B4Pan1"/>
+    <vehicle id="24g4" color="255,255,255" depart="1859" end="3600" type="Truck" route="Panam-Mari-Merc3"/>
+    <vehicle id="a28c2" color="255,0,127" depart="1889" end="3600" type="Other" route="Termi-B4Pan2"/>
+    <vehicle id="3e4" color="255,255,0" depart="1895" end="3600" type="Taxi" route="Col-Redon-Merc3"/>
+    <vehicle id="1a4" color="0,255,255" depart="1900" end="3600" type="Bus" route="Col-Panam1"/>
+    <vehicle id="41e3" color="255,255,0" depart="1900" end="3600" type="Taxi" route="Col-Fray-Redon-Panam1"/>
+    <vehicle id="29f1" color="255,0,0" depart="1905" end="3600" type="Trail" route="Termi-Col3"/>
+    <vehicle id="35g3" color="255,255,255" depart="1947" end="3600" type="Truck" route="Panam-Pan-Obel1"/>
+    <vehicle id="23g3" color="255,255,255" depart="1952" end="3600" type="Truck" route="Panam-Mari-Obel2"/>
+    <vehicle id="a28d4" color="255,128,0" depart="1967" end="3600" type="Moto" route="Termi-B4Pan1"/>
+    <vehicle id="2c1" color="255,0,127" depart="1988" end="3600" type="Other" route="Col-Termi2"/>
+    <vehicle id="41d1" color="255,128,0" depart="1998" end="3600" type="Moto" route="Col-Fray-Redon-Panam1"/>
+    <vehicle id="15g2" color="255,255,255" depart="2000" end="3600" type="Truck" route="Obel-Fray-B4Pan3"/>
+    <vehicle id="3d5" color="255,128,0" depart="2004" end="3600" type="Moto" route="Col-Redon-Merc2"/>
+    <vehicle id="35g4" color="255,255,255" depart="2014" end="3600" type="Truck" route="Panam-Pan-Obel2"/>
+    <vehicle id="16d4" color="255,128,0" depart="2030" end="3600" type="Moto" route="Obel-Fray-Yach1"/>
+    <vehicle id="34e3" color="255,255,0" depart="2060" end="3600" type="Taxi" route="Panam-Yach2"/>
+    <vehicle id="28d2" color="255,128,0" depart="2067" end="3600" type="Moto" route="Termi-Yach1"/>
+    <vehicle id="39g3" color="255,255,255" depart="2072" end="3600" type="Truck" route="Col-Fray-Merc3"/>
+    <vehicle id="39c1" color="255,0,127" depart="2075" end="3600" type="Other" route="Col-Fray-Merc3"/>
+    <vehicle id="a37g3" color="255,255,255" depart="2087" end="3600" type="Truck" route="Yach-B4Mall3"/>
+    <vehicle id="18a1" color="0,255,255" depart="2120" end="3600" type="Bus" route="Merc-Fray-B4Pan1"/>
+    <vehicle id="4d5" color="255,128,0" depart="2152" end="3600" type="Moto" route="Col-Redon-Obel3"/>
+    <vehicle id="3e5" color="255,255,0" depart="2165" end="3600" type="Taxi" route="Col-Redon-Merc3"/>
+    <vehicle id="32g2" color="255,255,255" depart="2165" end="3600" type="Truck" route="Termi-Panam2"/>
+    <vehicle id="18c2" color="255,0,127" depart="2169" end="3600" type="Other" route="Merc-Fray-B4Pan1"/>
+    <vehicle id="3f1" color="255,0,0" depart="2189" end="3600" type="Trail" route="Col-Redon-Merc1"/>
+    <vehicle id="23c3" color="255,0,127" depart="2189" end="3600" type="Other" route="Panam-Mari-Obel1"/>
+    <vehicle id="a33g4" color="255,255,255" depart="2225" end="3600" type="Truck" route="Panam-B4Pan1"/>
+    <vehicle id="26a4" color="0,255,255" depart="2230" end="3600" type="Bus" route="Panam-Mari-Fray-Col2"/>
+    <vehicle id="17g2" color="255,255,255" depart="2251" end="3600" type="Truck" route="Obel-Fray-Col3"/>
+    <vehicle id="a23g4" color="255,255,255" depart="2262" end="3600" type="Truck" route="Panam-Mari-B4Mall1"/>
+    <vehicle id="30c1" color="255,0,127" depart="2289" end="3600" type="Other" route="Termi-Pan-Obel1"/>
+    <vehicle id="31c1" color="255,0,127" depart="2289" end="3600" type="Other" route="Termi-Pan-Merc1"/>
+    <vehicle id="9d3" color="255,128,0" depart="2300" end="3600" type="Moto" route="Obel-Redon-Panam1"/>
+    <vehicle id="34d2" color="255,128,0" depart="2309" end="3600" type="Moto" route="Panam-Yach2"/>
+    <vehicle id="a37c2" color="255,0,127" depart="2309" end="3600" type="Other" route="Yach-B4Mall1"/>
+    <vehicle id="9c1" color="255,0,127" depart="2329" end="3600" type="Other" route="Obel-Redon-Panam1"/>
+    <vehicle id="43e3" color="255,255,0" depart="2336" end="3600" type="Taxi" route="Yach-Fray-Redon-Panam3"/>
+    <vehicle id="36g1" color="255,255,255" depart="2352" end="3600" type="Truck" route="Panam-Pan-Merc1"/>
+    <vehicle id="33c1" color="255,0,127" depart="2355" end="3600" type="Other" route="Panam-Col1"/>
+    <vehicle id="23a5" color="0,255,255" depart="2360" end="3600" type="Bus" route="Panam-Mari-Obel2"/>
+    <vehicle id="30e2" color="255,255,0" depart="2363" end="3600" type="Taxi" route="Termi-Pan-Obel1"/>
+    <vehicle id="28g5" color="255,255,255" depart="2399" end="3600" type="Truck" route="Termi-Yach1"/>
+    <vehicle id="5d3" color="255,128,0" depart="2428" end="3600" type="Moto" route="Merc-Fray-Termi2"/>
+    <vehicle id="1g4" color="255,255,255" depart="2430" end="3600" type="Truck" route="Col-Panam1"/>
+    <vehicle id="13b3" color="255,0,255" depart="2435" end="3600" type="Car" route="Merc-Redon-Col2"/>
+    <vehicle id="3a1" color="0,255,255" depart="2450" end="3600" type="Bus" route="Col-Redon-Merc1"/>
+    <vehicle id="4a1" color="0,255,255" depart="2450" end="3600" type="Bus" route="Col-Redon-Obel1"/>
+    <vehicle id="41e4" color="255,255,0" depart="2460" end="3600" type="Taxi" route="Col-Fray-Redon-Panam1"/>
+    <vehicle id="42e3" color="255,255,0" depart="2480" end="3600" type="Taxi" route="Col-Fray-Redon-Termi1"/>
+    <vehicle id="32c2" color="255,0,127" depart="2486" end="3600" type="Other" route="Termi-Panam1"/>
+    <vehicle id="29c3" color="255,0,127" depart="2509" end="3600" type="Other" route="Termi-Col3"/>
+    <vehicle id="36c1" color="255,0,127" depart="2549" end="3600" type="Other" route="Panam-Pan-Merc3"/>
+    <vehicle id="8f1" color="255,0,0" depart="2553" end="3600" type="Trail" route="Obel-B4Redon1"/>
+    <vehicle id="44e2" color="255,255,0" depart="2560" end="3600" type="Taxi" route="Yach-Fray-Redon-Termi2"/>
+    <vehicle id="42g1" color="255,255,255" depart="2565" end="3600" type="Truck" route="Col-Fray-Redon-Termi2"/>
+    <vehicle id="14b3" color="255,0,255" depart="2570" end="3600" type="Car" route="Merc-Redon-Yach3"/>
+    <vehicle id="40g4" color="255,255,255" depart="2582" end="3600" type="Truck" route="Col-Fray-Obel3"/>
+    <vehicle id="a37g4" color="255,255,255" depart="2620" end="3600" type="Truck" route="Yach-B4Mall2"/>
+    <vehicle id="4h1" color="255,128,0" depart="2630" end="3600" type="Machinery" route="Col-Redon-Obel1"/>
+    <vehicle id="34e4" color="255,255,0" depart="2660" end="3600" type="Taxi" route="Panam-Yach1"/>
+    <vehicle id="3e6" color="255,255,0" depart="2671" end="3600" type="Taxi" route="Col-Redon-Merc2"/>
+    <vehicle id="28d3" color="255,128,0" depart="2675" end="3600" type="Moto" route="Termi-Yach2"/>
+    <vehicle id="36d3" color="255,128,0" depart="2678" end="3600" type="Moto" route="Panam-Pan-Merc1"/>
+    <vehicle id="1c4" color="255,0,127" depart="2680" end="3600" type="Other" route="Col-Panam1"/>
+    <vehicle id="15d2" color="255,128,0" depart="2702" end="3600" type="Moto" route="Obel-Fray-B4Pan3"/>
+    <vehicle id="a23g5" color="255,255,255" depart="2702" end="3600" type="Truck" route="Panam-Mari-B4Mall2"/>
+    <vehicle id="3g2" color="255,255,255" depart="2730" end="3600" type="Truck" route="Col-Redon-Merc1"/>
+    <vehicle id="39g4" color="255,255,255" depart="2742" end="3600" type="Truck" route="Col-Fray-Merc2"/>
+    <vehicle id="35e4" color="255,255,0" depart="2760" end="3600" type="Taxi" route="Panam-Pan-Obel1"/>
+    <vehicle id="8g2" color="255,255,255" depart="2762" end="3600" type="Truck" route="Obel-B4Redon1"/>
+    <vehicle id="49e1b" color="255,255,0" depart="2770" end="3450" type="Taxi" route="Merc-Fray-Termi2"/>
+    <vehicle id="26g3" color="255,255,255" depart="2790" end="3600" type="Truck" route="Panam-Mari-Fray-Col3"/>
+    <vehicle id="56g3" color="255,255,255" depart="2790" end="3600" type="Truck" route="Panam-Mari-Fray-B4Pan3"/>
+    <vehicle id="59g1" color="255,255,255" depart="2790" end="3600" type="Truck" route="Yach-Mari-B4Redon2"/>
+    <vehicle id="3d6" color="255,128,0" depart="2796" end="3600" type="Moto" route="Col-Redon-Merc3"/>
+    <vehicle id="5g2" color="255,255,255" depart="2840" end="3600" type="Truck" route="Merc-Fray-Panam1"/>
+    <vehicle id="9d4" color="255,128,0" depart="2847" end="3600" type="Moto" route="Obel-Redon-Panam3"/>
+    <vehicle id="35d3" color="255,128,0" depart="2848" end="3600" type="Moto" route="Panam-Pan-Obel1"/>
+    <vehicle id="a28d5" color="255,128,0" depart="2858" end="3600" type="Moto" route="Termi-B4Pan2"/>
+    <vehicle id="10c3" color="255,0,127" depart="2907" end="3600" type="Other" route="Obel-Redon-Col2"/>
+    <vehicle id="a33g5" color="255,255,255" depart="2925" end="3600" type="Truck" route="Panam-B4Pan2"/>
+    <vehicle id="26a5" color="0,255,255" depart="2940" end="3600" type="Bus" route="Panam-Mari-Fray-Col3"/>
+    <vehicle id="1g5" color="255,255,255" depart="2950" end="3600" type="Truck" route="Col-Panam2"/>
+    <vehicle id="14d1" color="255,128,0" depart="2956" end="3600" type="Moto" route="Merc-Redon-Yach1"/>
+    <vehicle id="34e5" color="255,255,0" depart="2962" end="3600" type="Taxi" route="Panam-Yach3"/>
+    <vehicle id="16d5" color="255,128,0" depart="2973" end="3600" type="Moto" route="Obel-Fray-Yach3"/>
+    <vehicle id="4d6" color="255,128,0" depart="2992" end="3600" type="Moto" route="Col-Redon-Obel1"/>
+    <vehicle id="3d7" color="255,128,0" depart="2998" end="3600" type="Moto" route="Col-Redon-Merc3"/>
+    <vehicle id="39g5" color="255,255,255" depart="3002" end="3600" type="Truck" route="Col-Fray-Merc3"/>
+    <vehicle id="a37c3" color="255,0,127" depart="3009" end="3600" type="Other" route="Yach-B4Mall3"/>
+    <vehicle id="1a5" color="0,255,255" depart="3020" end="3600" type="Bus" route="Col-Panam2"/>
+    <vehicle id="5d4" color="255,128,0" depart="3028" end="3600" type="Moto" route="Merc-Fray-Termi3"/>
+    <vehicle id="2g4" color="255,255,255" depart="3030" end="3600" type="Truck" route="Col-Termi1"/>
+    <vehicle id="13d2" color="255,128,0" depart="3030" end="3600" type="Moto" route="Merc-Redon-Col1"/>
+    <vehicle id="17g3" color="255,255,255" depart="3048" end="3600" type="Truck" route="Obel-Fray-Col2"/>
+    <vehicle id="9d5" color="255,128,0" depart="3066" end="3600" type="Moto" route="Obel-Redon-Panam1"/>
+    <vehicle id="41e5" color="255,255,0" depart="3100" end="3600" type="Taxi" route="Col-Fray-Redon-Panam3"/>
+    <vehicle id="40g5" color="255,255,255" depart="3102" end="3600" type="Truck" route="Col-Fray-Obel1"/>
+    <vehicle id="3d8" color="255,128,0" depart="3106" end="3600" type="Moto" route="Col-Redon-Merc2"/>
+    <vehicle id="19g2" color="255,255,255" depart="3133" end="3600" type="Truck" route="Merc-Fray-Yach1"/>
+    <vehicle id="3e7" color="255,255,0" depart="3145" end="3600" type="Taxi" route="Col-Redon-Merc3"/>
+    <vehicle id="18a2" color="0,255,255" depart="3150" end="3600" type="Bus" route="Merc-Fray-B4Pan2"/>
+    <vehicle id="a23g6" color="255,255,255" depart="3152" end="3600" type="Truck" route="Panam-Mari-B4Mall1"/>
+    <vehicle id="19c2" color="255,0,127" depart="3154" end="3600" type="Other" route="Merc-Fray-Yach1"/>
+    <vehicle id="42e4" color="255,255,0" depart="3160" end="3600" type="Taxi" route="Col-Fray-Redon-Termi2"/>
+    <vehicle id="39g6" color="255,255,255" depart="3212" end="3600" type="Truck" route="Col-Fray-Merc2"/>
+    <vehicle id="1g6" color="255,255,255" depart="3230" end="3600" type="Truck" route="Col-Panam3"/>
+    <vehicle id="44e3" color="255,255,0" depart="3260" end="3600" type="Taxi" route="Yach-Fray-Redon-Termi1"/>
+    <vehicle id="16d6" color="255,128,0" depart="3273" end="3600" type="Moto" route="Obel-Fray-Yach1"/>
+    <vehicle id="a37g5" color="255,255,255" depart="3287" end="3600" type="Truck" route="Yach-B4Mall1"/>
+    <vehicle id="9d6" color="255,128,0" depart="3291" end="3600" type="Moto" route="Obel-Redon-Panam2"/>
+    <vehicle id="14d2" color="255,128,0" depart="3302" end="3600" type="Moto" route="Merc-Redon-Yach2"/>
+    <vehicle id="29f2" color="255,0,0" depart="3305" end="3600" type="Trail" route="Termi-Col2"/>
+    <vehicle id="3d9" color="255,128,0" depart="3306" end="3600" type="Moto" route="Col-Redon-Merc1"/>
+    <vehicle id="40g6" color="255,255,255" depart="3312" end="3600" type="Truck" route="Col-Fray-Obel2"/>
+    <vehicle id="9c2" color="255,0,127" depart="3319" end="3600" type="Other" route="Obel-Redon-Panam2"/>
+    <vehicle id="1g7" color="255,255,255" depart="3330" end="3600" type="Truck" route="Col-Panam1"/>
+    <vehicle id="12g2" color="255,255,255" depart="3355" end="3600" type="Truck" route="Merc-Redon-Panam3"/>
+    <vehicle id="32g3" color="255,255,255" depart="3378" end="3600" type="Truck" route="Termi-Panam3"/>
+    <vehicle id="41g1" color="255,255,255" depart="3392" end="3600" type="Truck" route="Col-Fray-Redon-Panam1"/>
+    <vehicle id="13g1" color="255,255,255" depart="3400" end="3600" type="Truck" route="Merc-Redon-Col1"/>
+    <vehicle id="39a2" color="0,255,255" depart="3400" end="3600" type="Bus" route="Col-Fray-Merc2"/>
+    <vehicle id="22d1" color="255,128,0" depart="3404" end="3600" type="Moto" route="Mari-Fray-Col2"/>
+    <vehicle id="34d3" color="255,128,0" depart="3409" end="3600" type="Moto" route="Panam-Yach3"/>
+    <vehicle id="35e5" color="255,255,0" depart="3420" end="3600" type="Taxi" route="Panam-Pan-Obel1"/>
+    <vehicle id="3e8" color="255,255,0" depart="3426" end="3600" type="Taxi" route="Col-Redon-Merc2"/>
+    <vehicle id="26a6" color="0,255,255" depart="3430" end="3600" type="Bus" route="Panam-Mari-Fray-Col1"/>
+    <vehicle id="5d5" color="255,128,0" depart="3448" end="3600" type="Moto" route="Merc-Fray-Panam1"/>
+    <vehicle id="10g1" color="255,255,255" depart="3462" end="3600" type="Truck" route="Obel-Redon-Col3"/>
+    <vehicle id="a28d6" color="255,128,0" depart="3467" end="3600" type="Moto" route="Termi-B4Pan1"/>
+    <vehicle id="15d3" color="255,128,0" depart="3502" end="3600" type="Moto" route="Obel-Fray-B4Pan2"/>
+    <vehicle id="36g2" color="255,255,255" depart="3502" end="3600" type="Truck" route="Panam-Pan-Merc2"/>
+    <vehicle id="26g4" color="255,255,255" depart="3509" end="3600" type="Truck" route="Panam-Mari-Fray-Col1"/>
+    <vehicle id="3h1" color="255,128,0" depart="3510" end="3600" type="Machinery" route="Col-Redon-Merc1"/>
+    <vehicle id="a23g7" color="255,255,255" depart="3522" end="3600" type="Truck" route="Panam-Mari-B4Mall1"/>
+    <vehicle id="42e5" color="255,255,0" depart="3524" end="3600" type="Taxi" route="Col-Fray-Redon-Termi1"/>
+    <vehicle id="26a7" color="0,255,255" depart="3530" end="3600" type="Bus" route="Panam-Mari-Fray-Col1"/>
+    <vehicle id="39g7" color="255,255,255" depart="3532" end="3600" type="Truck" route="Col-Fray-Merc1"/>
+    <vehicle id="17d4" color="255,128,0" depart="3564" end="3600" type="Moto" route="Obel-Fray-Col1"/>
+    <vehicle id="34e6" color="255,255,0" depart="3580" end="3600" type="Taxi" route="Panam-Yach3"/>
+</routes>

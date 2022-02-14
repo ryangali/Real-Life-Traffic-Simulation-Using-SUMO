@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<configuration>
+	<input>
+		<net-file value="IbarraTriangleMap.net.xml"/>
+		<route-files value="RoutesIbarraTriangle.rou.xml"/>
+	</input>
+
+	<time>
+		<begin value="0"/>	
+	</time>
+	
+	<output>
+		<summary-output value="Summary.xml" />
+	</output>
+
+	<report>
+		<xml-validation value="never"/>
+		<duration-log.disable value="true"/>
+		<duration-log.statistics value="true"/>
+		<no-step-log value="true"/>
+		<device.emissions.probability value="1.0"/>
+	</report>
+</configuration>
